@@ -1,0 +1,375 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  /* color */
+  --main-color: #ecf2ff;
+  --accent-color: #1f2497;
+  --white-color: #fff;
+  --border-color: #aec8ff;
+  --indigo-color: #1d2362;
+  --gray-color: #5c5c5c;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+body {
+  font-family: "Pretendard-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-weight: 400;
+  background-color: var(--main-color);
+}
+
+section {
+  margin-bottom: 200px;
+}
+
+/* common */
+.section__title {
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* layout */
+.wrap {
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  font-size: 24px;
+  font-weight: bold;
+  right: 10px;
+  top: 110px;
+}
+
+.navbar li {
+  display: flex;
+  width: 200px;
+  height: 60px;
+  align-items: center;
+  border-top: 1px solid black;
+  cursor: pointer;
+}
+
+.navbar li:hover {
+  color: var(--accent-color);
+}
+
+/* home */
+.home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 130px;
+  margin: 200px auto;
+}
+
+.home__avatar {
+  width: 400px;
+  height: 400px;
+  background: url("/images/뉴진스.jpeg") no-repeat center/cover;
+  border-radius: 100%;
+}
+
+.home__intro {
+  position: relative;
+  max-width: calc(1200px - 530px);
+}
+
+.home__intro::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 4px;
+  width: 100px;
+  height: 4px;
+  background-color: #000;
+}
+.home__intro__title {
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+}
+
+.home__intro__desc {
+  font-weight: bold;
+  text-align: justify;
+}
+
+/* profile */
+.profile__title::after {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 250px;
+  height: 10px;
+  background-color: var(--border-color);
+}
+
+.profile__card {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.profile__card__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: calc(100% * 1 / 3);
+  padding: 60px 0px;
+  background-color: var(--white-color);
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.profile__card__left__avatar {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+}
+
+.profile__card__left__info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.profile__card__left__info b {
+  display: block;
+}
+
+.profile__card__left__info b:first-child {
+  margin-bottom: 20px;
+}
+
+.profile__card__left__info p {
+  color: var(--gray-color);
+}
+
+.profile__card__left__info p:first-child {
+  margin-bottom: 20px;
+}
+
+.profile__card__right {
+  width: calc(100% * 2 / 3);
+  background-color: var(--white-color);
+  padding: 60px 40px;
+  text-align: justify;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.profile__card__right__content,
+.profile__card__right__title {
+  margin-bottom: 30px;
+}
+
+.profile__card__right__content > p {
+  color: var(--gray-color);
+}
+.profile__card__right__content > span {
+  font-size: 16px;
+  color: var(--gray-color);
+}
+
+/* skills */
+
+.skills__title::after {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 160px;
+  height: 10px;
+  background-color: var(--border-color);
+}
+
+.skills__container {
+  display: flex;
+  text-align: center;
+  padding: 40px 50px 60px;
+  border-radius: 20px;
+  background-color: var(--white-color);
+}
+
+.skills__container h2 {
+  color: var(--indigo-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 50px;
+}
+
+.skills__container__left,
+.skills__container__right {
+  flex-basis: 50%;
+}
+
+.skills__container__left {
+  border-right: 2px solid var(--border-color);
+}
+
+.skills__boxes__top {
+  display: flex;
+  gap: 40px;
+  margin: 40px 0px;
+}
+
+.skills__boxes__bottom {
+  display: flex;
+  gap: 40px;
+}
+.skills__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 170px;
+  border: 5px solid var(--border-color);
+  border-radius: 50%;
+}
+
+.skills__box > img {
+  height: 70px;
+}
+
+.skills__container__right > .skills__boxes {
+  padding-left: 50px;
+}
+
+/* portfolio */
+.portfolio__title::after {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 270px;
+  height: 10px;
+  background-color: var(--border-color);
+}
+
+.portfolio__button__wrap {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.portfolio__button__wrap button {
+  border: 0;
+  outline: 0;
+  background: var(--white-color);
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.portfolio__button__wrap button:hover {
+  background-color: var(--border-color);
+  color: var(--white-color);
+}
+.portfolio__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.portfolio__card {
+  width: 100%;
+  text-align: center;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.portfolio__card > img {
+  width: 100%;
+  height: 335px;
+}
+
+.portfolio__card__text-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.portfolio__card__desc {
+  font-size: 16px;
+}
+
+.portfolio__icon__box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+/* CONTACT */
+
+.contact__title::after {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 230px;
+  height: 10px;
+  background-color: var(--border-color);
+}
