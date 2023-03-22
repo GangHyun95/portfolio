@@ -103,6 +103,10 @@ section {
   color: var(--accent-color);
 }
 
+.navbar li.active {
+  color: var(--accent-color);
+}
+
 /* home */
 .home {
   position: relative;
@@ -111,7 +115,8 @@ section {
   width: 100%;
   max-width: 1200px;
   gap: 130px;
-  margin: 200px auto;
+  margin: 0px auto;
+  padding: 200px 0;
 }
 
 .home__avatar {
@@ -273,6 +278,7 @@ section {
   gap: 40px;
 }
 .skills__box {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -284,6 +290,37 @@ section {
 
 .skills__box > img {
   height: 70px;
+}
+
+.skills__description {
+  position: absolute;
+  /* top: -5px;
+  left: -5px; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  background-color: black;
+  border-radius: 50%;
+  color: var(--white-color);
+  word-break: break-all;
+  opacity: 0;
+  transition: all 300ms ease-in;
+}
+
+.skills__description > p {
+  font-size: 20px;
+  color: var(--main-color);
+}
+
+.skills__description > span {
+  font-size: 16px;
+}
+.skills__box:hover .skills__description {
+  opacity: 0.7;
 }
 
 .skills__container__right > .skills__boxes {
@@ -302,14 +339,14 @@ section {
   background-color: var(--border-color);
 }
 
-.portfolio__button__wrap {
+.portfolio__categories {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin-bottom: 40px;
 }
 
-.portfolio__button__wrap button {
+.portfolio__categories button {
   border: 0;
   outline: 0;
   background: var(--white-color);
@@ -318,7 +355,8 @@ section {
   cursor: pointer;
 }
 
-.portfolio__button__wrap button:hover {
+.portfolio__categories button:hover,
+.portfolio__categories button.selected {
   background-color: var(--border-color);
   color: var(--white-color);
 }
@@ -334,6 +372,10 @@ section {
   background-color: var(--white-color);
   border-radius: 10px;
   overflow: hidden;
+}
+
+.portfolio__card.invisible {
+  display: none;
 }
 
 .portfolio__card > img {
