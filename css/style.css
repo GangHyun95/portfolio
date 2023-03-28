@@ -16,11 +16,15 @@
   --border-color: #aec8ff;
   --indigo-color: #1d2362;
   --gray-color: #5c5c5c;
+  --black-color: #000;
+  --blue-color: #6e85b7;
+  --orange-color: #ffb319;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-margin-top: 100px;
 }
 
 li {
@@ -28,7 +32,7 @@ li {
 }
 
 a {
-  color: #000;
+  color: var(--black-color);
   text-decoration: none;
 }
 
@@ -64,10 +68,20 @@ section {
 
 /* common */
 .section__title {
+  /* transform: translateY(50px); */
+  opacity: 0;
   position: relative;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 100px;
+  margin: 0 0 100px 0;
+  transition-property: transform, opacity;
+  transition-duration: 1.5s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.section__title.show {
+  opacity: 1;
+  /* transform: translateY(0); */
 }
 
 /* layout */
@@ -91,21 +105,25 @@ section {
 }
 
 .navbar li {
+  position: relative;
   display: flex;
   width: 200px;
   height: 60px;
   align-items: center;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--blue-color);
   cursor: pointer;
+  /* color: var(--temp); */
+  color: var(--blue-color);
 }
 
 .navbar li:hover {
-  color: var(--accent-color);
+  color: var(--black-color);
+  font-weight: 900;
 }
 
-.navbar li.active {
+/* .navbar li.active {
   color: var(--accent-color);
-}
+} */
 
 /* home */
 .home {
@@ -116,7 +134,7 @@ section {
   max-width: 1200px;
   gap: 130px;
   margin: 0px auto;
-  padding: 200px 0;
+  padding: 200px 0 250px;
 }
 
 .home__avatar {
@@ -138,7 +156,7 @@ section {
   left: 4px;
   width: 100px;
   height: 4px;
-  background-color: #000;
+  background-color: var(--black-color);
 }
 .home__intro__title {
   font-weight: bold;
@@ -250,6 +268,7 @@ section {
   padding: 40px 50px 60px;
   border-radius: 20px;
   background-color: var(--white-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .skills__container h2 {
@@ -285,7 +304,7 @@ section {
   width: 170px;
   height: 170px;
   border: 5px solid var(--border-color);
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
 .skills__box > img {
@@ -303,24 +322,32 @@ section {
   align-items: center;
   width: inherit;
   height: inherit;
-  background-color: black;
+  text-align: center;
+  background-color: var(--black-color);
   border-radius: 50%;
   color: var(--white-color);
-  word-break: break-all;
   opacity: 0;
   transition: all 300ms ease-in;
 }
 
 .skills__description > p {
+  white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -30px;
   font-size: 20px;
-  color: var(--main-color);
+  color: var(--black-color);
 }
 
 .skills__description > span {
+  width: 80%;
+  border-radius: 50%;
+  text-align: justify;
   font-size: 16px;
 }
 .skills__box:hover .skills__description {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .skills__container__right > .skills__boxes {
@@ -353,6 +380,7 @@ section {
   padding: 5px 20px;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 300ms ease-in-out;
 }
 
 .portfolio__categories button:hover,
@@ -362,12 +390,20 @@ section {
 }
 .portfolio__container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  opacity: 1;
+  transition: all 300ms ease-out;
 }
 
+.portfolio__container.anim-out {
+  opacity: 0;
+  transform: scale(0.95) translateY(40px);
+}
 .portfolio__card {
+  position: relative;
   width: 100%;
+  padding-bottom: 80%;
   text-align: center;
   background-color: var(--white-color);
   border-radius: 10px;
@@ -379,15 +415,32 @@ section {
 }
 
 .portfolio__card > img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: 335px;
+  height: 100%;
+}
+
+.portfolio__card > img.cover {
+  object-fit: cover;
 }
 
 .portfolio__card__text-box {
+  position: absolute;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  opacity: 0;
   gap: 10px;
+  border-radius: 10px;
+  transform: translateY(70px);
+  transition: all 350ms ease-in;
 }
 
 .portfolio__card__desc {
@@ -395,12 +448,24 @@ section {
 }
 
 .portfolio__icon__box {
+  position: absolute;
+  bottom: 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   margin-bottom: 20px;
   font-size: 32px;
   font-weight: 400;
+}
+.portfolio__icon__box i {
+  cursor: pointer;
+  color: white;
+}
+
+.portfolio__card:hover .portfolio__card__text-box {
+  opacity: 0.7;
+  transform: translateY(0);
 }
 
 /* CONTACT */

@@ -18,6 +18,7 @@ window.onload = function () {
 
   // Portfolio section
   const btnContainer = document.querySelectorAll(".category__btn");
+  const projectContainer = document.querySelector(".portfolio__container");
   const projects = document.querySelectorAll(".portfolio__card");
 
   btnContainer.forEach((btn) =>
@@ -28,25 +29,55 @@ window.onload = function () {
       e.currentTarget.classList.add("selected");
 
       const filter = e.currentTarget.dataset.filter;
-      projects.forEach((project) => {
-        console.log(project.dataset.type);
-        if (filter === "all" || filter === project.dataset.type) {
-          project.classList.remove("invisible");
-        } else {
-          project.classList.add("invisible");
-        }
-      });
+
+      projectContainer.classList.add("anim-out");
+      setTimeout(() => {
+        projects.forEach((project) => {
+          if (filter === "all" || filter === project.dataset.type) {
+            project.classList.remove("invisible");
+          } else {
+            project.classList.add("invisible");
+          }
+        });
+        projectContainer.classList.remove("anim-out");
+      }, 300);
     })
   );
 
+  const titleEntries = document.querySelectorAll(".section__title");
+  console.log(titleEntries);
+  fadeUp(titleEntries, 0.8);
+
+  // 버튼 색깔
   function selectNavItem(selected) {
     selectedNavItem.classList.remove("active");
     selectedNavItem = selected;
     selectedNavItem.classList.add("active");
   }
-
+  // 스크롤 이동
   function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+    scrollTo.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // 스크롤 opacity 0 -> opacity 1
+  function fadeUp(arr, threshold) {
+    const options = {
+      threshold: threshold,
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        let yCoordinate =
+          window.scrollY + entry.target.getBoundingClientRect().top;
+        if (!entry.isIntersecting && window.scrollY < yCoordinate) {
+          entry.target.classList.remove("show");
+        } else {
+          entry.target.classList.add("show");
+        }
+      });
+    }, options);
+    arr.forEach((item) => {
+      observer.observe(item);
+    });
   }
 };
