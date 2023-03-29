@@ -141,7 +141,7 @@ section {
 .home__avatar {
   width: 400px;
   height: 400px;
-  background: url("/images/뉴진스.jpeg") no-repeat center/cover;
+  background: url("./images/뉴진스.jpeg") no-repeat center/cover;
   border-radius: 100%;
 }
 
