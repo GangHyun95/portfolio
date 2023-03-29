@@ -84,6 +84,19 @@ section {
   /* transform: translateY(0); */
 }
 
+.anim-up {
+  transform: translateY(200px);
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.anim-up.up {
+  opacity: 1;
+  transform: none;
+}
+
 /* layout */
 .wrap {
 }
@@ -399,6 +412,7 @@ section {
   background-color: var(--white-color);
   border-radius: 10px;
   overflow: hidden;
+  transform: translateY(100px);
 }
 
 .portfolio__card.invisible {

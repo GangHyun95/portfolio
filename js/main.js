@@ -45,7 +45,7 @@ window.onload = function () {
   );
 
   const titleEntries = document.querySelectorAll(".section__title");
-  console.log(titleEntries);
+
   fadeUp(titleEntries, 0.8);
 
   // 버튼 색깔
@@ -78,6 +78,30 @@ window.onload = function () {
     }, options);
     arr.forEach((item) => {
       observer.observe(item);
+    });
+  }
+
+  // 스크롤 애니메이션
+  const saUpList = document.querySelectorAll(".anim-up");
+  window.addEventListener("scroll", () => {
+    saUp(saUpList);
+  });
+  saUp(saUpList);
+  // 스크롤 위로 올라오고 아래로 사라지는 애니메이션
+  function saUp(ele) {
+    ele.forEach((el) => {
+      if (!el.classList.contains("up")) {
+        if (window.innerHeight > el.getBoundingClientRect().top) {
+          el.classList.add("up");
+        }
+      } else {
+        if (
+          window.innerHeight <
+          el.getBoundingClientRect().top + el.getBoundingClientRect().height / 5
+        ) {
+          el.classList.remove("up");
+        }
+      }
     });
   }
 };
