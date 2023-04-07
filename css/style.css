@@ -59,12 +59,12 @@ body {
   font-size: 20px;
   line-height: 1.4;
   letter-spacing: 0;
-  font-weight: 400;
+  font-weight: 900;
   background-color: var(--main-color);
 }
 
 section {
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 
 /* common */
@@ -72,7 +72,7 @@ section {
   /* transform: translateY(50px); */
   opacity: 0;
   position: relative;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
   margin: 0 0 80px 0;
   letter-spacing: 0.2rem;
@@ -107,6 +107,7 @@ section {
   position: relative;
   width: 100%;
   max-width: 1280px;
+  padding: 40px;
   margin: 0 auto;
 }
 
@@ -149,7 +150,7 @@ section {
   max-width: 1200px;
   gap: 80px;
   margin: 0px auto;
-  padding: 200px 0 250px;
+  padding: 250px 0;
 }
 
 .home__avatar {
@@ -202,27 +203,53 @@ section {
 .profile {
   position: relative;
   display: flex;
+  gap: 50px;
 }
+
+.iphone {
+  width: 350px;
+  height: 700px;
+}
+
+.profile__intro {
+  padding: 70px 0px;
+  font-size: 18px;
+  color: var(--skills-color);
+  line-height: 1.6;
+}
+
+.profile__intro-title {
+  font-size: 24px;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
 .profile__info-box {
   position: absolute;
-  left: 100px;
+  left: 50px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  gap: 10px;
+  width: 100%;
+  gap: 50px;
 }
 
 .profile__info-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 40px;
-  width: 80%;
-  height: 150px;
+  gap: 6px;
+  padding: 35px 40px;
+  width: 100%;
+  max-width: 260px;
+  font-size: 16px;
   background-color: var(--skills-color);
   color: var(--white-color);
   border-radius: 10px;
+}
+
+.info-item__title {
+  font-size: 20px;
 }
 
 /* skills */
@@ -292,8 +319,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
   background-color: var(--white-color);
   border-radius: 100%;
 }

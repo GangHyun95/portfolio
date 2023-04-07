@@ -29,6 +29,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -89,11 +95,11 @@
         </div>
       </section>
       <div class="inner">
-        <div class="profile" id="profile">
-          <img src="./images/KakaoTalk_20230406_173335968.png" alt="훋폰" />
+        <section class="profile" id="profile">
+          <img class="iphone" src="./images/iphone.png" alt="훋폰" />
           <div class="profile__intro">
             <h3 class="profile__intro-title">INTRO</h3>
-            <p>
+            <p class="profile__intro-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
               ipsum suspendisse ultrices gravida Risus commodeo viverra maecenas
@@ -102,7 +108,7 @@
             <div class="profile__info-box">
               <div class="profile__info-item">
                 <h3 class="info-item__title">허강현</h3>
-                <p>1995.10.31|대구</p>
+                <p>1995.10.31 | 대구</p>
                 <p>+82 10.5434.1031</p>
               </div>
               <div class="profile__info-item">
@@ -118,13 +124,13 @@
                 <p>자동차 운전면허 1종</p>
                 <p>컴퓨터 활용 능력 2급</p>
               </div>
-              <div class="profile__info-item">
+              <!-- <div class="profile__info-item">
                 <h3 class="info-item__title">EXPERIENCE</h3>
                 <p>이전 직무를 작성해 주시면 됩니다.</p>
-              </div>
+              </div> -->
             </div>
           </div>
-        </div>
+        </section>
         <!-- skill -->
         <section class="skills" id="skills">
           <h1 class="section__title skills__title">SKILLS</h1>

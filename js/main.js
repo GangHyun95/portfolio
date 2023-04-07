@@ -47,7 +47,6 @@ window.onload = function () {
   const titleEntries = document.querySelectorAll(".section__title");
 
   fadeUp(titleEntries, 0.8);
-
   // 버튼 색깔
   function selectNavItem(selected) {
     selectedNavItem.classList.remove("active");
