@@ -45,9 +45,8 @@ window.onload = function () {
   );
 
   const titleEntries = document.querySelectorAll(".section__title");
-  const transparentText = document.querySelector(".fade");
+
   fadeUp(titleEntries, 0.8);
-  fadeUp(transparentText, 1);
   // 버튼 색깔
   function selectNavItem(selected) {
     selectedNavItem.classList.remove("active");
@@ -61,37 +60,24 @@ window.onload = function () {
   }
 
   // 스크롤 opacity 0 -> opacity 1
-  function fadeUp(ele, threshold) {
+  function fadeUp(arr, threshold) {
     const options = {
       threshold: threshold,
     };
     const observer = new IntersectionObserver((entries) => {
-      if (ele.length > 1) {
-        entries.forEach((entry) => {
-          let yCoordinate =
-            window.scrollY + entry.target.getBoundingClientRect().top;
-          if (!entry.isIntersecting && window.scrollY < yCoordinate) {
-            entry.target.classList.remove("show");
-          } else {
-            entry.target.classList.add("show");
-          }
-        });
-      } else {
-        let yCoordinate = window.scrollY + ele.getBoundingClientRect().top;
-        if (!ele.isIntersecting && window.scrollY < yCoordinate) {
-          ele.classList.remove("show");
+      entries.forEach((entry) => {
+        let yCoordinate =
+          window.scrollY + entry.target.getBoundingClientRect().top;
+        if (!entry.isIntersecting && window.scrollY < yCoordinate) {
+          entry.target.classList.remove("show");
         } else {
-          ele.classList.add("show");
+          entry.target.classList.add("show");
         }
-      }
-    }, options);
-    if (ele.length > 1) {
-      ele.forEach((item) => {
-        observer.observe(item);
       });
-    } else {
-      observer.observe(ele);
-    }
+    }, options);
+    arr.forEach((item) => {
+      observer.observe(item);
+    });
   }
 
   // 스크롤 애니메이션
