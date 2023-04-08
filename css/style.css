@@ -235,7 +235,12 @@ section {
 
 .profile__resume {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--skills-color);
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .profile__resume::before {
@@ -253,6 +258,12 @@ section {
   font-size: 20px;
   margin-left: 45px;
 }
+
+.cursor-img {
+  width: 40px;
+  height: 40px;
+}
+
 .profile__intro-title {
   font-size: 24px;
   color: var(--accent-color);
