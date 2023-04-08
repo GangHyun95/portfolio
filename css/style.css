@@ -211,13 +211,48 @@ section {
   height: 700px;
 }
 
+.profile__circle {
+  position: absolute;
+  left: -450px;
+  top: 60%;
+  transform: translateY(-50%);
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background-color: var(--skills-color);
+  z-index: -1000;
+}
+
 .profile__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 70px 0px;
   font-size: 18px;
   color: var(--skills-color);
   line-height: 1.6;
 }
 
+.profile__resume {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.profile__resume::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 6px;
+  background-color: var(--skills-color);
+}
+
+.profile__resume > p {
+  font-size: 20px;
+  margin-left: 45px;
+}
 .profile__intro-title {
   font-size: 24px;
   color: var(--accent-color);
