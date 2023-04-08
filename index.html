@@ -37,27 +37,30 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </head>
   <body>
-    <div class="wrap">
-      <!-- nav -->
-      <nav class="navbar">
-        <ul class="gnb">
-          <li data-link="#home">
-            <p>HOME</p>
-          </li>
-          <li data-link="#profile">
-            <p>PROFILE</p>
-          </li>
-          <li data-link="#skills">
-            <p>SKILL</p>
-          </li>
-          <li data-link="#portfolio">
-            <p>PORTFOLIO</p>
-          </li>
-          <li data-link="#contact">
-            <p>CONTACT</p>
-          </li>
-        </ul>
-      </nav>
+    <!-- nav -->
+    <nav class="navbar">
+      <ul class="gnb">
+        <li data-link="#home">
+          <p>HOME</p>
+        </li>
+        <li data-link="#profile">
+          <p>PROFILE</p>
+        </li>
+        <li data-link="#skills">
+          <p>SKILL</p>
+        </li>
+        <li data-link="#portfolio">
+          <p>PROJECT</p>
+        </li>
+        <li data-link="#contact">
+          <p>CONTACT</p>
+        </li>
+      </ul>
+      <button class="navbar__toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+    <div class="inner">
       <!-- home -->
       <section class="home anim-down" id="home">
         <div class="home__avatar"></div>
@@ -94,378 +97,362 @@
           </div>
         </div>
       </section>
-      <div class="inner">
-        <section class="profile anim-up" id="profile">
-          <img class="iphone" src="./images/iphone.png" alt="훋폰" />
-          <div class="profile__circle"></div>
-          <div class="profile__intro">
-            <div class="profile__intro__text">
-              <h3 class="profile__intro-title">INTRO</h3>
-              <p class="profile__intro-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-                ipsum suspendisse ultrices gravida Risus commodeo viverra
-                maecenas accumsan lacus vel facilisis
+      <section class="profile anim-up" id="profile">
+        <img class="iphone" src="./images/iphone.png" alt="훋폰" />
+        <div class="profile__circle"></div>
+        <div class="profile__intro">
+          <div class="profile__intro__text">
+            <h3 class="profile__intro-title">INTRO</h3>
+            <p class="profile__intro-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+              ipsum suspendisse ultrices gravida Risus commodeo viverra maecenas
+              accumsan lacus vel facilisis
+            </p>
+          </div>
+          <div class="profile__info-box">
+            <div class="profile__info-item">
+              <h3 class="info-item__title">허강현</h3>
+              <p>1995.10.31 | 대구</p>
+              <p>+82 10.5434.1031</p>
+            </div>
+            <div class="profile__info-item">
+              <h3 class="info-item__title">MOTTO</h3>
+              <p>
+                늘 배움의 자세로<br />
+                앞으로 나아가자!
               </p>
             </div>
-            <div class="profile__info-box">
-              <div class="profile__info-item">
-                <h3 class="info-item__title">허강현</h3>
-                <p>1995.10.31 | 대구</p>
-                <p>+82 10.5434.1031</p>
-              </div>
-              <div class="profile__info-item">
-                <h3 class="info-item__title">MOTTO</h3>
-                <p>
-                  늘 배움의 자세로<br />
-                  앞으로 나아가자!
-                </p>
-              </div>
-              <div class="profile__info-item">
-                <h3 class="info-item__title">EDUCATION</h3>
-                <p>
-                  프론트엔드 React 개발자<br />
-                  양성과정 수료
-                </p>
-              </div>
-              <div class="profile__info-item">
-                <h3 class="info-item__title">LICENSE</h3>
-                <p>자동차 운전면허 1종</p>
-                <p>컴퓨터 활용 능력 2급</p>
-              </div>
-              <!-- <div class="profile__info-item">
+            <div class="profile__info-item">
+              <h3 class="info-item__title">EDUCATION</h3>
+              <p>
+                프론트엔드 React 개발자<br />
+                양성과정 수료
+              </p>
+            </div>
+            <div class="profile__info-item">
+              <h3 class="info-item__title">LICENSE</h3>
+              <p>자동차 운전면허 1종</p>
+              <p>컴퓨터 활용 능력 2급</p>
+            </div>
+            <!-- <div class="profile__info-item">
                 <h3 class="info-item__title">EXPERIENCE</h3>
                 <p>이전 직무를 작성해 주시면 됩니다.</p>
               </div> -->
-            </div>
-            <a href="./asset/resume.pdf" download class="profile__resume">
-              <p>이력서 다운로드</p>
-              <img
-                class="cursor-img"
-                src="./images/cursor.png"
-                alt="cursorimg"
-              />
-            </a>
           </div>
-        </section>
-        <!-- skill -->
-        <section class="skills" id="skills">
-          <h1 class="section__title skills__title fade">SKILLS</h1>
-          <div class="skills__container anim-up">
-            <div class="skills__container__left">
-              <h2>SKILLS</h2>
-              <div class="skills__boxes">
-                <div class="skills__boxes__top">
-                  <div class="skills__box">
-                    <img src="./images/html.png" alt="HTML" />
-                    <div class="skills__description">
-                      <p>HTML5</p>
-                      <span>
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                      </span>
-                    </div>
-                  </div>
-                  <div class="skills__box">
-                    <img src="./images/CSS.png" alt="CSS" />
-                    <div class="skills__description">
-                      <p>CSS3</p>
-                      <span>
-                        스타일시트 표준을 준수하여 코드를 작성할 수 있습니다.
-                      </span>
-                    </div>
-                  </div>
-                  <div class="skills__box">
-                    <img src="./images/JS.png" alt="JS" />
-                    <div class="skills__description">
-                      <p>JavaScript</p>
-                      <span>
-                        웹사이트에 필요한 동적 기능들을 구현할 수 있습니다.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skills__boxes__bottom">
-                  <div class="skills__box">
-                    <img src="./images/react.png" alt="REACT" />
-                    <div class="skills__description">
-                      <p>REACT</p>
-                      <span>
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                      </span>
-                    </div>
-                  </div>
-                  <div class="skills__box">
-                    <img src="./images/redux.png" alt="REDUX" />
-                    <div class="skills__description">
-                      <p>REDUX</p>
-                      <span>
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                      </span>
-                    </div>
-                  </div>
-                  <div class="skills__box">
-                    <img src="./images/typescript.png" alt="TS" />
-                    <div class="skills__description">
-                      <p>TypeScript</p>
-                      <span>
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="skills__container__right">
-              <h2>TOOL & ETC</h2>
-              <div class="skills__boxes">
-                <div class="skills__boxes__top">
-                  <div class="skills__box">
-                    <img src="./images/figma.png" alt="Figma" />
-                    <div class="skills__description">
-                      <p>Figma</p>
-                      <span>
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                      </span>
-                    </div>
-                  </div>
-                  <div class="skills__box">
-                    <img
-                      src="./images/styled-component.png"
-                      alt="styled-component"
-                    />
-                    <div class="skills__description">
-                      <p>ㅇㅅㅇ</p>
-                      <span>
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                      </span>
-                    </div>
-                  </div>
-                  <div class="skills__box">
-                    <img src="./images/tailwind.png" alt="Tailwind" />
-                    <div class="skills__description">
-                      <p>tailwind</p>
-                      <span>
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="skills__boxes__bottom">
-                  <div class="skills__box">
-                    <img src="./images/react-query.png" alt="react-query" />
-                    <div class="skills__description">
-                      <p>React-query</p>
-                      <span>
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                      </span>
-                    </div>
-                  </div>
-                  <div class="skills__box">
-                    <img src="./images/PostCSS.png" alt="PostCSS" />
-                    <div class="skills__description">
-                      <p>ㅇㅅㅇ</p>
-                      <span>
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                      </span>
-                    </div>
-                  </div>
-                  <div class="skills__box">
-                    <img src="./images/github.png" alt="Github" />
-                    <div class="skills__description">
-                      <p>Github</p>
-                      <span>
-                        웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- portfolio -->
-        <section class="portfolio" id="portfolio">
-          <h1 class="section__title portfolio__title fade">PORTFOLIO</h1>
-
-          <div class="portfolio__categories fade">
-            <button class="category__btn selected" data-filter="all">
-              ALL
-            </button>
-            <button class="category__btn" data-filter="team">Team</button>
-            <button class="category__btn" data-filter="personal">
-              Personal
-            </button>
-          </div>
-          <div class="anim-up">
-            <div class="portfolio__container">
-              <div class="portfolio__card" data-type="personal">
-                <img src="./images/Todo.gif" alt="" />
-                <div class="portfolio__card__text-box">
-                  <h4>Drag&Drop Todo</h4>
-                  <p class="portfolio__card__desc">
-                    react-beautiful-dnd 사용해서 drag&drop이 가능하게구현했.
-                  </p>
-                  <div class="portfolio__icon__box">
-                    <a
-                      href="https://ganghyun95.github.io/Drag-DropToDo/"
-                      target="_blank"
-                      ><i class="fa-solid fa-desktop"></i
-                    ></a>
-                    <a
-                      href="https://github.com/GangHyun95/Drag-DropToDo"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-github"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio__card" data-type="team">
-                <img src="./images/저기요.gif" class="cover" alt="" />
-                <div class="portfolio__card__text-box">
-                  <h4>배달 주문 서비스(요기요 벤치마킹)</h4>
-                  <div class="portfolio__card__desc">
-                    <p>제작기간 <span>23.01.09 ~ 23.02.05</span></p>
-                  </div>
-                  <div class="portfolio__icon__box">
-                    <a
-                      href="https://www.youtube.com/watch?v=l4c_RrM14EM"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-youtube"></i
-                    ></a>
-                    <a
-                      href="https://github.com/GangHyun95/project_yogiyo"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio__card" data-type="team">
-                <img src="./images/Bon Voyage.gif" class="cover" alt="" />
-                <div class="portfolio__card__text-box">
-                  <h4>Bon Voyage(MYRO 벤치마킹)</h4>
-                  <p class="portfolio__card__desc">
-                    제작기간:2023.01.11 ~2023.02.05
-                  </p>
-                  <div class="portfolio__icon__box">
-                    <a
-                      href="https://www.youtube.com/watch?v=ePmlGtwn984"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-youtube"></i
-                    ></a>
-                    <a
-                      href="https://github.com/GangHyun95/BON-VOYAGE"
-                      target="_blank"
-                      ><i class="fa-brands fa-github"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio__card" data-type="personal">
-                <img src="./images/youtube.png" alt="" />
-                <div class="portfolio__card__text-box">
-                  <h4>Youtube</h4>
-                  <p class="portfolio__card__desc">Youtube API</p>
-                  <div class="portfolio__icon__box">
-                    <a
-                      href="https://ganghyun95.github.io/youtube/"
-                      target="_blank"
-                      ><i class="fa-solid fa-desktop"></i
-                    ></a>
-                    <a
-                      href="https://github.com/GangHyun95/youtube"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-github"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio__card" data-type="personal">
-                <img src="./images/coin.png" class="cover" alt="" />
-                <div class="portfolio__card__text-box">
-                  <h4>Coin 사이트</h4>
-                  <p class="portfolio__card__desc">coinpaprika api 사용</p>
-                  <div class="portfolio__icon__box">
-                    <a
-                      href="https://ganghyun95.github.io/CRYPTO-TRACKER/"
-                      target="_blank"
-                    >
-                      <i class="fa-solid fa-desktop"></i
-                    ></a>
-                    <a
-                      href="https://github.com/GangHyun95/CRYPTO-TRACKER"
-                      target="_blank"
-                    >
-                      <i class="fa-brands fa-github"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="portfolio__card" data-type="personal">
-                <img src="./images/미완작업물_썸네일.jpg" alt="" />
-                <div class="portfolio__card__text-box">
-                  <h4>한살림 클론코딩</h4>
-                  <p class="portfolio__card__desc">
-                    한살림을 클론코딩했습니다.
-                  </p>
-                  <div class="portfolio__icon__box">
-                    <i class="fa-solid fa-desktop"></i>
-                    <i class="fa-brands fa-github"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio__card" data-type="personal">
-                <img src="./images/미완작업물_썸네일.jpg" alt="" />
-                <div class="portfolio__card__text-box">
-                  <h4>한살림 클론코딩</h4>
-                  <p class="portfolio__card__desc">
-                    한살림을 클론코딩했습니다.
-                  </p>
-                  <div class="portfolio__icon__box">
-                    <i class="fa-solid fa-desktop"></i>
-                    <i class="fa-brands fa-github"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio__card" data-type="personal">
-                <img src="./images/미완작업물_썸네일.jpg" alt="" />
-                <div class="portfolio__card__text-box">
-                  <h4>한살림 클론코딩</h4>
-                  <p class="portfolio__card__desc">
-                    한살림을 클론코딩했습니다.
-                  </p>
-                  <div class="portfolio__icon__box">
-                    <i class="fa-solid fa-desktop"></i>
-                    <i class="fa-brands fa-github"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- contact -->
-      <section class="contact" id="contact">
-        <h1 class="section__title contact__title fade">CONTACT</h1>
-        <div class="contact__icon">
-          <a href="https://open.kakao.com/o/s7RcLrcf" target="_blank">
-            <img src="./images/kakaotalk.png" alt="kakao" />
+          <a href="./asset/resume.pdf" download class="profile__resume">
+            <p>이력서 다운로드</p>
+            <img class="cursor-img" src="./images/cursor.png" alt="cursorimg" />
           </a>
-          <a href="https://github.com/GangHyun95" target="_blank">
-            <img src="./images/github.png" alt="github" />
-          </a>
-          <img src="./images/mail.png" alt="메일" />
         </div>
-        <p class="contact__copyright">
-          Copyright 2023. heo gang hyun All rights reserved.
-        </p>
+      </section>
+      <!-- skill -->
+      <section class="skills" id="skills">
+        <h1 class="section__title skills__title fade">SKILLS</h1>
+        <div class="skills__container anim-up">
+          <div class="skills__container__left">
+            <h2>SKILLS</h2>
+            <div class="skills__boxes">
+              <div class="skills__boxes__top">
+                <div class="skills__box">
+                  <img src="./images/html.png" alt="HTML" />
+                  <div class="skills__description">
+                    <p>HTML5</p>
+                    <span>
+                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                    </span>
+                  </div>
+                </div>
+                <div class="skills__box">
+                  <img src="./images/CSS.png" alt="CSS" />
+                  <div class="skills__description">
+                    <p>CSS3</p>
+                    <span>
+                      스타일시트 표준을 준수하여 코드를 작성할 수 있습니다.
+                    </span>
+                  </div>
+                </div>
+                <div class="skills__box">
+                  <img src="./images/JS.png" alt="JS" />
+                  <div class="skills__description">
+                    <p>JavaScript</p>
+                    <span>
+                      웹사이트에 필요한 동적 기능들을 구현할 수 있습니다.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="skills__boxes__bottom">
+                <div class="skills__box">
+                  <img src="./images/react.png" alt="REACT" />
+                  <div class="skills__description">
+                    <p>REACT</p>
+                    <span>
+                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                    </span>
+                  </div>
+                </div>
+                <div class="skills__box">
+                  <img src="./images/redux.png" alt="REDUX" />
+                  <div class="skills__description">
+                    <p>REDUX</p>
+                    <span>
+                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                    </span>
+                  </div>
+                </div>
+                <div class="skills__box">
+                  <img src="./images/typescript.png" alt="TS" />
+                  <div class="skills__description">
+                    <p>TypeScript</p>
+                    <span>
+                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills__container__right">
+            <h2>TOOL & ETC</h2>
+            <div class="skills__boxes">
+              <div class="skills__boxes__top">
+                <div class="skills__box">
+                  <img src="./images/figma.png" alt="Figma" />
+                  <div class="skills__description">
+                    <p>Figma</p>
+                    <span>
+                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                    </span>
+                  </div>
+                </div>
+                <div class="skills__box">
+                  <img
+                    src="./images/styled-component.png"
+                    alt="styled-component"
+                  />
+                  <div class="skills__description">
+                    <p>ㅇㅅㅇ</p>
+                    <span>
+                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                    </span>
+                  </div>
+                </div>
+                <div class="skills__box">
+                  <img src="./images/tailwind.png" alt="Tailwind" />
+                  <div class="skills__description">
+                    <p>tailwind</p>
+                    <span>
+                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="skills__boxes__bottom">
+                <div class="skills__box">
+                  <img src="./images/react-query.png" alt="react-query" />
+                  <div class="skills__description">
+                    <p>React-query</p>
+                    <span>
+                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                    </span>
+                  </div>
+                </div>
+                <div class="skills__box">
+                  <img src="./images/PostCSS.png" alt="PostCSS" />
+                  <div class="skills__description">
+                    <p>ㅇㅅㅇ</p>
+                    <span>
+                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                    </span>
+                  </div>
+                </div>
+                <div class="skills__box">
+                  <img src="./images/github.png" alt="Github" />
+                  <div class="skills__description">
+                    <p>Github</p>
+                    <span>
+                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- portfolio -->
+      <section class="portfolio" id="portfolio">
+        <h1 class="section__title portfolio__title fade">PROJECT</h1>
+
+        <div class="portfolio__categories fade">
+          <button class="category__btn selected" data-filter="all">ALL</button>
+          <button class="category__btn" data-filter="team">Team</button>
+          <button class="category__btn" data-filter="personal">Personal</button>
+        </div>
+        <div class="anim-up">
+          <div class="portfolio__container">
+            <div class="portfolio__card" data-type="personal">
+              <img src="./images/Todo.gif" alt="" />
+              <div class="portfolio__card__text-box">
+                <h4>Drag&Drop Todo</h4>
+                <p class="portfolio__card__desc">
+                  react-beautiful-dnd 사용해서 drag&drop이 가능하게구현했.
+                </p>
+                <div class="portfolio__icon__box">
+                  <a
+                    href="https://ganghyun95.github.io/Drag-DropToDo/"
+                    target="_blank"
+                    ><i class="fa-solid fa-desktop"></i
+                  ></a>
+                  <a
+                    href="https://github.com/GangHyun95/Drag-DropToDo"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__card" data-type="team">
+              <img src="./images/저기요.gif" class="cover" alt="" />
+              <div class="portfolio__card__text-box">
+                <h4>배달 주문 서비스(요기요 벤치마킹)</h4>
+                <div class="portfolio__card__desc">
+                  <p>제작기간 <span>23.01.09 ~ 23.02.05</span></p>
+                </div>
+                <div class="portfolio__icon__box">
+                  <a
+                    href="https://www.youtube.com/watch?v=l4c_RrM14EM"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-youtube"></i
+                  ></a>
+                  <a
+                    href="https://github.com/GangHyun95/project_yogiyo"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__card" data-type="team">
+              <img src="./images/Bon Voyage.gif" class="cover" alt="" />
+              <div class="portfolio__card__text-box">
+                <h4>Bon Voyage(MYRO 벤치마킹)</h4>
+                <p class="portfolio__card__desc">
+                  제작기간:2023.01.11 ~2023.02.05
+                </p>
+                <div class="portfolio__icon__box">
+                  <a
+                    href="https://www.youtube.com/watch?v=ePmlGtwn984"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-youtube"></i
+                  ></a>
+                  <a
+                    href="https://github.com/GangHyun95/BON-VOYAGE"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__card" data-type="personal">
+              <img src="./images/youtube.png" alt="" />
+              <div class="portfolio__card__text-box">
+                <h4>Youtube</h4>
+                <p class="portfolio__card__desc">Youtube API</p>
+                <div class="portfolio__icon__box">
+                  <a
+                    href="https://ganghyun95.github.io/youtube/"
+                    target="_blank"
+                    ><i class="fa-solid fa-desktop"></i
+                  ></a>
+                  <a
+                    href="https://github.com/GangHyun95/youtube"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__card" data-type="personal">
+              <img src="./images/coin.png" class="cover" alt="" />
+              <div class="portfolio__card__text-box">
+                <h4>Coin 사이트</h4>
+                <p class="portfolio__card__desc">coinpaprika api 사용</p>
+                <div class="portfolio__icon__box">
+                  <a
+                    href="https://ganghyun95.github.io/CRYPTO-TRACKER/"
+                    target="_blank"
+                  >
+                    <i class="fa-solid fa-desktop"></i
+                  ></a>
+                  <a
+                    href="https://github.com/GangHyun95/CRYPTO-TRACKER"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio__card" data-type="personal">
+              <img src="./images/미완작업물_썸네일.jpg" alt="" />
+              <div class="portfolio__card__text-box">
+                <h4>한살림 클론코딩</h4>
+                <p class="portfolio__card__desc">한살림을 클론코딩했습니다.</p>
+                <div class="portfolio__icon__box">
+                  <i class="fa-solid fa-desktop"></i>
+                  <i class="fa-brands fa-github"></i>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__card" data-type="personal">
+              <img src="./images/미완작업물_썸네일.jpg" alt="" />
+              <div class="portfolio__card__text-box">
+                <h4>한살림 클론코딩</h4>
+                <p class="portfolio__card__desc">한살림을 클론코딩했습니다.</p>
+                <div class="portfolio__icon__box">
+                  <i class="fa-solid fa-desktop"></i>
+                  <i class="fa-brands fa-github"></i>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__card" data-type="personal">
+              <img src="./images/미완작업물_썸네일.jpg" alt="" />
+              <div class="portfolio__card__text-box">
+                <h4>한살림 클론코딩</h4>
+                <p class="portfolio__card__desc">한살림을 클론코딩했습니다.</p>
+                <div class="portfolio__icon__box">
+                  <i class="fa-solid fa-desktop"></i>
+                  <i class="fa-brands fa-github"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
+    <!-- contact -->
+    <section class="contact" id="contact">
+      <h1 class="section__title contact__title fade">CONTACT</h1>
+      <div class="contact__icon fade">
+        <a href="https://open.kakao.com/o/s7RcLrcf" target="_blank">
+          <img src="./images/kakaotalk.png" alt="kakao" />
+        </a>
+        <a href="https://github.com/GangHyun95" target="_blank">
+          <img src="./images/github.png" alt="github" />
+        </a>
+        <img src="./images/mail.png" alt="메일" />
+      </div>
+      <p class="contact__copyright fade">
+        Copyright 2023. heo gang hyun All rights reserved.
+      </p>
+    </section>
   </body>
 </html>

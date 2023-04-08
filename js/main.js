@@ -1,12 +1,32 @@
 window.onload = function () {
+  // 스크롤 시 navbar 색깔 생김()
+  const nav = document.querySelector(".navbar");
+  const navHeight = nav.getBoundingClientRect().height;
+  document.addEventListener("scroll", () => {
+    if (window.scrollY > navHeight) {
+      nav.classList.add("navbar--dark");
+    } else {
+      nav.classList.remove("navbar--dark");
+    }
+  });
   // navbar 클릭 시 스크롤 이동
+  const navbarMenu = document.querySelector(".gnb");
   const navbar = document.querySelectorAll(".gnb > li");
+  const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+
+  console.log(nav);
   navbar.forEach((navbarItem) => {
     navbarItem.addEventListener("click", (e) => {
       const link = e.currentTarget.dataset.link;
       scrollIntoView(link);
       selectNavItem(e.currentTarget);
+      navbarMenu.classList.remove("open");
     });
+  });
+
+  // 모바일 스크린 토글 버튼
+  navbarToggleBtn.addEventListener("click", () => {
+    navbarMenu.classList.toggle("open");
   });
 
   // 활성화 navbar active 클래스 추가
