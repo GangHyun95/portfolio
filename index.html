@@ -59,7 +59,7 @@
         </ul>
       </nav>
       <!-- home -->
-      <section class="home" id="home">
+      <section class="home anim-down" id="home">
         <div class="home__avatar"></div>
         <div class="home__intro">
           <h1 class="home__intro__title">
@@ -95,7 +95,7 @@
         </div>
       </section>
       <div class="inner">
-        <section class="profile" id="profile">
+        <section class="profile anim-up" id="profile">
           <img class="iphone" src="./images/iphone.png" alt="훋폰" />
           <div class="profile__circle"></div>
           <div class="profile__intro">
@@ -150,7 +150,7 @@
         </section>
         <!-- skill -->
         <section class="skills" id="skills">
-          <h1 class="section__title skills__title">SKILLS</h1>
+          <h1 class="section__title skills__title fade">SKILLS</h1>
           <div class="skills__container anim-up">
             <div class="skills__container__left">
               <h2>SKILLS</h2>
@@ -285,9 +285,9 @@
         </section>
         <!-- portfolio -->
         <section class="portfolio" id="portfolio">
-          <h1 class="section__title portfolio__title">PORTFOLIO</h1>
+          <h1 class="section__title portfolio__title fade">PORTFOLIO</h1>
 
-          <div class="portfolio__categories">
+          <div class="portfolio__categories fade">
             <button class="category__btn selected" data-filter="all">
               ALL
             </button>
@@ -296,146 +296,154 @@
               Personal
             </button>
           </div>
-          <div class="portfolio__container">
-            <div class="portfolio__card" data-type="personal">
-              <img src="./images/Todo.gif" alt="" />
-              <div class="portfolio__card__text-box">
-                <h4>Drag&Drop Todo</h4>
-                <p class="portfolio__card__desc">
-                  react-beautiful-dnd 사용해서 drag&drop이 가능하게구현했.
-                </p>
-                <div class="portfolio__icon__box">
-                  <a
-                    href="https://ganghyun95.github.io/Drag-DropToDo/"
-                    target="_blank"
-                    ><i class="fa-solid fa-desktop"></i
-                  ></a>
-                  <a
-                    href="https://github.com/GangHyun95/Drag-DropToDo"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-github"></i
-                  ></a>
+          <div class="anim-up">
+            <div class="portfolio__container">
+              <div class="portfolio__card" data-type="personal">
+                <img src="./images/Todo.gif" alt="" />
+                <div class="portfolio__card__text-box">
+                  <h4>Drag&Drop Todo</h4>
+                  <p class="portfolio__card__desc">
+                    react-beautiful-dnd 사용해서 drag&drop이 가능하게구현했.
+                  </p>
+                  <div class="portfolio__icon__box">
+                    <a
+                      href="https://ganghyun95.github.io/Drag-DropToDo/"
+                      target="_blank"
+                      ><i class="fa-solid fa-desktop"></i
+                    ></a>
+                    <a
+                      href="https://github.com/GangHyun95/Drag-DropToDo"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-github"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="portfolio__card" data-type="team">
-              <img src="./images/저기요.gif" alt="" />
-              <div class="portfolio__card__text-box">
-                <h4>배달 주문 서비스(요기요 벤치마킹)</h4>
-                <div class="portfolio__card__desc">
-                  <p>제작기간 <span>23.01.09 ~ 23.02.05</span></p>
-                </div>
-                <div class="portfolio__icon__box">
-                  <a
-                    href="https://www.youtube.com/watch?v=l4c_RrM14EM"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-youtube"></i
-                  ></a>
-                  <a
-                    href="https://github.com/GangHyun95/project_yogiyo"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio__card" data-type="team">
-              <img src="./images/Bon Voyage.gif" alt="" />
-              <div class="portfolio__card__text-box">
-                <h4>Bon Voyage(MYRO 벤치마킹)</h4>
-                <p class="portfolio__card__desc">
-                  제작기간:2023.01.11 ~2023.02.05
-                </p>
-                <div class="portfolio__icon__box">
-                  <a
-                    href="https://www.youtube.com/watch?v=ePmlGtwn984"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-youtube"></i
-                  ></a>
-                  <a
-                    href="https://github.com/GangHyun95/BON-VOYAGE"
-                    target="_blank"
-                    ><i class="fa-brands fa-github"></i
-                  ></a>
+              <div class="portfolio__card" data-type="team">
+                <img src="./images/저기요.gif" class="cover" alt="" />
+                <div class="portfolio__card__text-box">
+                  <h4>배달 주문 서비스(요기요 벤치마킹)</h4>
+                  <div class="portfolio__card__desc">
+                    <p>제작기간 <span>23.01.09 ~ 23.02.05</span></p>
+                  </div>
+                  <div class="portfolio__icon__box">
+                    <a
+                      href="https://www.youtube.com/watch?v=l4c_RrM14EM"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-youtube"></i
+                    ></a>
+                    <a
+                      href="https://github.com/GangHyun95/project_yogiyo"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="portfolio__card" data-type="personal">
-              <img src="./images/youtube.png" alt="" class="cover" />
-              <div class="portfolio__card__text-box">
-                <h4>Youtube</h4>
-                <p class="portfolio__card__desc">Youtube API</p>
-                <div class="portfolio__icon__box">
-                  <a
-                    href="https://ganghyun95.github.io/youtube/"
-                    target="_blank"
-                    ><i class="fa-solid fa-desktop"></i
-                  ></a>
-                  <a
-                    href="https://github.com/GangHyun95/youtube"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-github"></i
-                  ></a>
+              <div class="portfolio__card" data-type="team">
+                <img src="./images/Bon Voyage.gif" class="cover" alt="" />
+                <div class="portfolio__card__text-box">
+                  <h4>Bon Voyage(MYRO 벤치마킹)</h4>
+                  <p class="portfolio__card__desc">
+                    제작기간:2023.01.11 ~2023.02.05
+                  </p>
+                  <div class="portfolio__icon__box">
+                    <a
+                      href="https://www.youtube.com/watch?v=ePmlGtwn984"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-youtube"></i
+                    ></a>
+                    <a
+                      href="https://github.com/GangHyun95/BON-VOYAGE"
+                      target="_blank"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="portfolio__card" data-type="personal">
-              <img src="./images/coin.png" alt="" />
-              <div class="portfolio__card__text-box">
-                <h4>Coin 사이트</h4>
-                <p class="portfolio__card__desc">coinpaprika api 사용</p>
-                <div class="portfolio__icon__box">
-                  <a
-                    href="https://ganghyun95.github.io/CRYPTO-TRACKER/"
-                    target="_blank"
-                  >
-                    <i class="fa-solid fa-desktop"></i
-                  ></a>
-                  <a
-                    href="https://github.com/GangHyun95/CRYPTO-TRACKER"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-github"></i
-                  ></a>
+              <div class="portfolio__card" data-type="personal">
+                <img src="./images/youtube.png" alt="" />
+                <div class="portfolio__card__text-box">
+                  <h4>Youtube</h4>
+                  <p class="portfolio__card__desc">Youtube API</p>
+                  <div class="portfolio__icon__box">
+                    <a
+                      href="https://ganghyun95.github.io/youtube/"
+                      target="_blank"
+                      ><i class="fa-solid fa-desktop"></i
+                    ></a>
+                    <a
+                      href="https://github.com/GangHyun95/youtube"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-github"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
-            </div>
+              <div class="portfolio__card" data-type="personal">
+                <img src="./images/coin.png" class="cover" alt="" />
+                <div class="portfolio__card__text-box">
+                  <h4>Coin 사이트</h4>
+                  <p class="portfolio__card__desc">coinpaprika api 사용</p>
+                  <div class="portfolio__icon__box">
+                    <a
+                      href="https://ganghyun95.github.io/CRYPTO-TRACKER/"
+                      target="_blank"
+                    >
+                      <i class="fa-solid fa-desktop"></i
+                    ></a>
+                    <a
+                      href="https://github.com/GangHyun95/CRYPTO-TRACKER"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-github"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
 
-            <div class="portfolio__card" data-type="personal">
-              <img src="./images/미완작업물_썸네일.jpg" alt="" />
-              <div class="portfolio__card__text-box">
-                <h4>한살림 클론코딩</h4>
-                <p class="portfolio__card__desc">한살림을 클론코딩했습니다.</p>
-                <div class="portfolio__icon__box">
-                  <i class="fa-solid fa-desktop"></i>
-                  <i class="fa-brands fa-github"></i>
+              <div class="portfolio__card" data-type="personal">
+                <img src="./images/미완작업물_썸네일.jpg" alt="" />
+                <div class="portfolio__card__text-box">
+                  <h4>한살림 클론코딩</h4>
+                  <p class="portfolio__card__desc">
+                    한살림을 클론코딩했습니다.
+                  </p>
+                  <div class="portfolio__icon__box">
+                    <i class="fa-solid fa-desktop"></i>
+                    <i class="fa-brands fa-github"></i>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="portfolio__card" data-type="personal">
-              <img src="./images/미완작업물_썸네일.jpg" alt="" />
-              <div class="portfolio__card__text-box">
-                <h4>한살림 클론코딩</h4>
-                <p class="portfolio__card__desc">한살림을 클론코딩했습니다.</p>
-                <div class="portfolio__icon__box">
-                  <i class="fa-solid fa-desktop"></i>
-                  <i class="fa-brands fa-github"></i>
+              <div class="portfolio__card" data-type="personal">
+                <img src="./images/미완작업물_썸네일.jpg" alt="" />
+                <div class="portfolio__card__text-box">
+                  <h4>한살림 클론코딩</h4>
+                  <p class="portfolio__card__desc">
+                    한살림을 클론코딩했습니다.
+                  </p>
+                  <div class="portfolio__icon__box">
+                    <i class="fa-solid fa-desktop"></i>
+                    <i class="fa-brands fa-github"></i>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="portfolio__card" data-type="personal">
-              <img src="./images/미완작업물_썸네일.jpg" alt="" />
-              <div class="portfolio__card__text-box">
-                <h4>한살림 클론코딩</h4>
-                <p class="portfolio__card__desc">한살림을 클론코딩했습니다.</p>
-                <div class="portfolio__icon__box">
-                  <i class="fa-solid fa-desktop"></i>
-                  <i class="fa-brands fa-github"></i>
+              <div class="portfolio__card" data-type="personal">
+                <img src="./images/미완작업물_썸네일.jpg" alt="" />
+                <div class="portfolio__card__text-box">
+                  <h4>한살림 클론코딩</h4>
+                  <p class="portfolio__card__desc">
+                    한살림을 클론코딩했습니다.
+                  </p>
+                  <div class="portfolio__icon__box">
+                    <i class="fa-solid fa-desktop"></i>
+                    <i class="fa-brands fa-github"></i>
+                  </div>
                 </div>
               </div>
             </div>
@@ -444,7 +452,7 @@
       </div>
       <!-- contact -->
       <section class="contact" id="contact">
-        <h1 class="section__title contact__title">CONTACT</h1>
+        <h1 class="section__title contact__title fade">CONTACT</h1>
         <div class="contact__icon">
           <a href="https://open.kakao.com/o/s7RcLrcf" target="_blank">
             <img src="./images/kakaotalk.png" alt="kakao" />
