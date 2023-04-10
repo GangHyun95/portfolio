@@ -178,7 +178,7 @@ section {
 }
 
 .home__avatar {
-  width: 100%;
+  flex-basis: calc(100% / 3);
   padding-bottom: calc(100% / 3);
   background: url("../images/뉴진스.jpeg") no-repeat center/cover;
   border-radius: 100%;
@@ -186,7 +186,8 @@ section {
 
 .home__intro {
   position: relative;
-  max-width: calc(100% - 40%);
+  flex-basis: 10%;
+  flex-grow: 1;
 }
 
 .home__intro::after {
@@ -311,7 +312,6 @@ section {
   gap: 6px;
   padding: 35px 40px;
   width: 100%;
-  max-width: 260px;
   font-size: 16px;
   background-color: var(--skills-color);
   color: var(--white-color);
@@ -601,7 +601,8 @@ section {
   }
 
   .navbar.navbar--dark {
-    background-color: var(--skills-color);
+    background-color: var(--border-color);
+    color: var(--white-color);
     padding: 12px;
   }
 
@@ -622,20 +623,40 @@ section {
   .home {
     gap: 60px;
   }
-  .home__avatar {
-  }
-
-  .home__intro {
-    max-width: calc(100% - 360px);
-  }
   .home__intro__title {
-    font-size: 34px;
+    font-size: 40px;
   }
-
   .desc__title {
-    font-size: 16px;
+    font-size: 18px;
   }
   .desc__content {
-    font-size: 12px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+  }
+  .home__avatar {
+    width: 50%;
+    padding-bottom: 50%;
+  }
+  .home__intro {
+    text-align: center;
+  }
+  .home__intro::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .home__intro__desc {
+    text-align: center;
+  }
+
+  .desc__content {
+    text-align: justify;
+    font-size: 16px;
   }
 }
