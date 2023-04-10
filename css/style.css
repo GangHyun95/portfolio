@@ -642,6 +642,16 @@ section {
     gap: 60px;
   }
 
+  .iphone {
+    width: 300px;
+    height: 600px;
+  }
+  .profile__info-item {
+    padding: 30px 20px;
+  }
+  .profile__info-box {
+    left: 35px;
+  }
   .skills__container {
     flex-direction: column;
     gap: 50px;
@@ -705,6 +715,25 @@ section {
   .desc__content {
     text-align: justify;
   }
+
+  .iphone {
+    width: 250px;
+    height: 500px;
+  }
+
+  .profile__intro {
+    padding: 20px 0px;
+  }
+  .profile__info-item {
+    padding: 10px;
+  }
+
+  .profile__info-box {
+    left: 27px;
+  }
+  .info-item__title {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -724,6 +753,9 @@ section {
     font-size: 12px;
   }
 
+  section {
+    margin-bottom: 60px;
+  }
   .inner {
     padding: 20px;
     padding-top: 80px;
@@ -761,6 +793,7 @@ section {
   .home {
     padding: 0px;
     gap: 40px;
+    margin-bottom: 60px;
   }
 
   .skills__boxes {
@@ -775,10 +808,51 @@ section {
     height: 35px;
   }
 
+  .profile {
+    justify-content: center;
+  }
+  .img-box {
+    position: relative;
+  }
+
+  .profile__intro {
+    display: none;
+  }
+  .profile__info-box {
+    flex-direction: column;
+    top: 50%;
+    gap: 5px;
+  }
+
+  .profile__info-item {
+    width: 80%;
+  }
+
+  .profile__intro__text {
+    display: none;
+  }
   .portfolio__title::after {
     content: none;
   }
 
+  .profile__resume {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+  }
+
+  .profile__resume > p {
+    font-size: 14px;
+  }
+
+  .profile__resume::before {
+    content: none;
+  }
+
+  .cursor-img {
+    width: 30px;
+    height: 30px;
+  }
   .portfolio__container {
     grid-template-columns: repeat(1, 1fr);
   }
