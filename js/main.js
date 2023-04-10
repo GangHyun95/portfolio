@@ -12,7 +12,6 @@ window.onload = function () {
   // navbar 클릭 시 스크롤 이동
   const navbarMenu = document.querySelector(".gnb");
   const navbar = document.querySelectorAll(".gnb > li");
-  const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 
   console.log(nav);
   navbar.forEach((navbarItem) => {
@@ -22,11 +21,6 @@ window.onload = function () {
       selectNavItem(e.currentTarget);
       navbarMenu.classList.remove("open");
     });
-  });
-
-  // 모바일 스크린 토글 버튼
-  navbarToggleBtn.addEventListener("click", () => {
-    navbarMenu.classList.toggle("open");
   });
 
   // 활성화 navbar active 클래스 추가
