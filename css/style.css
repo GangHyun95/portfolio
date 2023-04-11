@@ -265,7 +265,7 @@ section {
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
-  padding: 70px 0px;
+  padding: 165px 0px;
   font-size: 18px;
   color: var(--skills-color);
   line-height: 1.6;
@@ -305,15 +305,19 @@ section {
 }
 
 .profile__intro-title {
-  font-size: 24px;
+  font-size: 35px;
   color: var(--accent-color);
   margin-bottom: 20px;
+}
+
+.profile__intro-desc {
+  color: var(--black-color);
 }
 
 .profile__info-box {
   position: absolute;
   left: 50px;
-  top: 50%;
+  top: 62%;
   transform: translateY(-50%);
   display: flex;
   width: 100%;
@@ -758,7 +762,7 @@ section {
   }
 
   .profile__intro {
-    padding: 20px 0px;
+    padding: 60px 0px;
   }
   .profile__info-item {
     padding: 20px 10px;
