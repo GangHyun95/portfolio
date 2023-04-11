@@ -404,6 +404,7 @@ section {
 }
 
 .skills__box > img {
+  width: 60px;
   height: 60px;
 }
 
