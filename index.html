@@ -191,18 +191,17 @@
                   <img src="./images/react.png" alt="REACT" />
                   <div class="skills__description">
                     <p>REACT</p>
-                    <span>
-                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                    </span>
+                    <span> </span>
                   </div>
                 </div>
                 <div class="skills__box">
                   <img src="./images/redux.png" alt="REDUX" />
                   <div class="skills__description">
-                    <p>REDUX</p>
-                    <span>
-                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                    </span>
+                    <p>Redux-toolkit</p>
+                    <span
+                      >Redux-toolkit을 활용하여 전역으로 상태를 관리할 수
+                      있습니다.</span
+                    >
                   </div>
                 </div>
                 <div class="skills__box">
@@ -210,7 +209,7 @@
                   <div class="skills__description">
                     <p>TypeScript</p>
                     <span>
-                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                      타입을 지정하여 코드의 안정성을 높일 수 있습니다.
                     </span>
                   </div>
                 </div>
@@ -226,7 +225,7 @@
                   <div class="skills__description">
                     <p>Figma</p>
                     <span>
-                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                      Figma를 이용하여 와이어프레임을 제작할 수 있습니다.
                     </span>
                   </div>
                 </div>
@@ -236,16 +235,14 @@
                     alt="styled-component"
                   />
                   <div class="skills__description">
-                    <p>ㅇㅅㅇ</p>
-                    <span>
-                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                    </span>
+                    <p>Styled-Components</p>
+                    <span></span>
                   </div>
                 </div>
                 <div class="skills__box">
                   <img src="./images/tailwind.png" alt="Tailwind" />
                   <div class="skills__description">
-                    <p>tailwind</p>
+                    <p>Tailwind Css</p>
                     <span>
                       웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
                     </span>
@@ -258,16 +255,16 @@
                   <div class="skills__description">
                     <p>React-query</p>
                     <span>
-                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                      React-query를 이용하여 데이터를 관리할 수 있습니다.
                     </span>
                   </div>
                 </div>
                 <div class="skills__box">
                   <img src="./images/recoil.png" alt="recoil" />
                   <div class="skills__description">
-                    <p>ㅇㅅㅇ</p>
+                    <p>Recoil</p>
                     <span>
-                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
+                      Recoil을 활용하여 전역으로 상태를 관리할 수 있습니다.
                     </span>
                   </div>
                 </div>
@@ -275,9 +272,7 @@
                   <img src="./images/github.png" alt="Github" />
                   <div class="skills__description">
                     <p>Github</p>
-                    <span>
-                      웹 표준성을 준수하여 시맨틱 마크업을 수행할 수 있습니다.
-                    </span>
+                    <span> Github를 이용하여 코드를 관리할 수 있습니다. </span>
                   </div>
                 </div>
               </div>
@@ -297,22 +292,23 @@
         <div class="anim-up">
           <div class="portfolio__container">
             <div class="portfolio__card" data-type="personal">
-              <img src="./images/Todo.gif" alt="" />
+              <img src="./images/Todo.gif" alt="todo" />
               <div class="portfolio__card__text-box">
                 <h4>Drag&Drop Todo</h4>
                 <p class="portfolio__card__desc">
                   React-beautiful-dnd를 사용해서 Board와 TodoList 간 Drag&Drop이
                   가능하게 구현하였습니다.
                 </p>
-                <h4>사용 기술</h4>
-                <p class="portfolio__card__desc">
-                  React-beautiful-dnd,React.js,TypeScript,Recoil,
-                  Styled-Components
-
+                <div class="portfolio__card__skill">
+                  <p class="portfolio__card__skill__title">사용 기술</p>
+                  <span>|</span>
+                  <p class="portfolio__card__skill__text">
+                    React-beautiful-dnd,TypeScript,Recoil
+                  </p>
                   <br />
                   <br />
                   <br />
-                </p>
+                </div>
                 <div class="portfolio__icon__box">
                   <a
                     href="https://ganghyun95.github.io/Drag-DropToDo/"
@@ -332,8 +328,17 @@
               <img src="./images/저기요.gif" class="cover" alt="" />
               <div class="portfolio__card__text-box">
                 <h4>배달 주문 서비스(요기요 벤치마킹)</h4>
-                <div class="portfolio__card__desc">
-                  <p>제작기간 <span>23.01.09 ~ 23.02.05</span></p>
+                <p class="portfolio__card__period">23.01.09 - 23.02.05</p>
+                <p class="portfolio__card__desc">
+                  가게분류, 회원가입, 로그인, 유효성 검사, 장바구니, 리뷰 등록
+                  및 삭제가 CRUD로 구현되어 있으며 restful API를 활용하였습니다.
+                </p>
+                <div class="portfolio__card__contribution">
+                  <p class="portfolio__card__contribution__title">기여도</p>
+                  <span>|</span>
+                  <p class="portfolio__card__contribution__text">
+                    장바구니,디테일 페이지,리뷰 작성 및 삭제
+                  </p>
                 </div>
                 <div class="portfolio__icon__box">
                   <a
@@ -354,10 +359,48 @@
             <div class="portfolio__card" data-type="team">
               <img src="./images/Bon Voyage.gif" class="cover" alt="" />
               <div class="portfolio__card__text-box">
-                <h4>Bon Voyage(MYRO 벤치마킹)</h4>
+                <h4>여행 일정 관리 사이트(MYRO 벤치마킹)</h4>
+                <p class="portfolio__card__period">23.02.07 - 23.03.03</p>
                 <p class="portfolio__card__desc">
-                  제작기간:2023.01.11 ~2023.02.05
+                  각 여행지별 추천 여행 장소, 식당, 숙박장소를 제공하여 보다
+                  편리하게 여행 일정생성 가능 할 수 있습니다. 장소별 좋아요를
+                  통해 사람들이 자주가는 여행장소를 제공 합니다.
                 </p>
+                <div class="portfolio__card__contribution">
+                  <p class="portfolio__card__contribution__title">기여도</p>
+                  <span>|</span>
+                  <p class="portfolio__card__contribution__text">
+                    메인페이지,지도이동기능,좋아요 및 취소기능
+                  </p>
+                </div>
+                <div class="portfolio__icon__box">
+                  <a
+                    href="https://www.youtube.com/watch?v=ePmlGtwn984"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-youtube"></i
+                  ></a>
+                  <a
+                    href="https://github.com/GangHyun95/BON-VOYAGE"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__card" data-type="team">
+              <img src="./images/쿨피스.gif" alt="쿨피스" />
+              <div class="portfolio__card__text-box">
+                <h4>쿨피스 (SchoolFitness)</h4>
+                <p class="portfolio__card__period">23.03.06 - 23.04.05</p>
+                <p class="portfolio__card__desc"></p>
+                <div class="portfolio__card__contribution">
+                  <p class="portfolio__card__contribution__title">기여도</p>
+                  <span>|</span>
+                  <p class="portfolio__card__contribution__text">
+                    회원가입,회원탈퇴,로그인,로그아웃,메인페이지
+                  </p>
+                </div>
                 <div class="portfolio__icon__box">
                   <a
                     href="https://www.youtube.com/watch?v=ePmlGtwn984"
@@ -374,10 +417,23 @@
               </div>
             </div>
             <div class="portfolio__card" data-type="personal">
-              <img src="./images/youtube.png" alt="" />
+              <img src="./images/youtube.png" alt="youtube" class="cover" />
               <div class="portfolio__card__text-box">
                 <h4>Youtube</h4>
-                <p class="portfolio__card__desc">Youtube API</p>
+                <p class="portfolio__card__desc">
+                  Youtube API를 이용하여 Youtube 웹 사이트를 클론코딩 및 반응형
+                  제작하였습니다.
+                </p>
+                <div class="portfolio__card__skill">
+                  <p class="portfolio__card__skill__title">사용 기술</p>
+                  <span>|</span>
+                  <p class="portfolio__card__skill__text">
+                    React-query,useContext,Tailwind Css
+                  </p>
+                  <br />
+                  <br />
+                  <br />
+                </div>
                 <div class="portfolio__icon__box">
                   <a
                     href="https://ganghyun95.github.io/youtube/"
@@ -394,10 +450,23 @@
               </div>
             </div>
             <div class="portfolio__card" data-type="personal">
-              <img src="./images/coin.png" class="cover" alt="" />
+              <img src="./images/coin.png" alt="coin" />
               <div class="portfolio__card__text-box">
-                <h4>Coin 사이트</h4>
-                <p class="portfolio__card__desc">coinpaprika api 사용</p>
+                <h4>Coin 시세 확인 사이트</h4>
+                <p class="portfolio__card__desc">
+                  Coinpaprika API 를 사용하여 코인시세를 실시간으로 확인할 수
+                  있는 사이트를 구현하였습니다.
+                </p>
+                <div class="portfolio__card__skill">
+                  <p class="portfolio__card__skill__title">사용 기술</p>
+                  <span>|</span>
+                  <p class="portfolio__card__skill__text">
+                    React-query,TypeScript,Recoil
+                  </p>
+                  <br />
+                  <br />
+                  <br />
+                </div>
                 <div class="portfolio__icon__box">
                   <a
                     href="https://ganghyun95.github.io/CRYPTO-TRACKER/"
@@ -414,37 +483,57 @@
                 </div>
               </div>
             </div>
-
             <div class="portfolio__card" data-type="personal">
               <img src="./images/미완작업물_썸네일.jpg" alt="" />
               <div class="portfolio__card__text-box">
-                <h4>한살림 클론코딩</h4>
-                <p class="portfolio__card__desc">한살림을 클론코딩했습니다.</p>
+                <h4>원더플레이스 클론코딩</h4>
+                <p class="portfolio__card__desc">
+                  원더플레이스 사이트를 클론코딩 및 반응형 웹을 제작하였습니다.
+                </p>
                 <div class="portfolio__icon__box">
                   <i class="fa-solid fa-desktop"></i>
-                  <i class="fa-brands fa-github"></i>
+                  <a href="https://github.com/GangHyun95/wonderplace">
+                    <i class="fa-brands fa-github"></i
+                  ></a>
                 </div>
               </div>
             </div>
             <div class="portfolio__card" data-type="personal">
-              <img src="./images/미완작업물_썸네일.jpg" alt="" />
+              <img src="./images/한살림.gif" alt="한살림" />
               <div class="portfolio__card__text-box">
                 <h4>한살림 클론코딩</h4>
-                <p class="portfolio__card__desc">한살림을 클론코딩했습니다.</p>
+                <p class="portfolio__card__desc">
+                  한살림장보기 사이트를 클론코딩하였습니다.
+                </p>
                 <div class="portfolio__icon__box">
-                  <i class="fa-solid fa-desktop"></i>
-                  <i class="fa-brands fa-github"></i>
+                  <a
+                    href="https://ganghyun95.github.io/hansalim/"
+                    target="_blank"
+                  >
+                    <i class="fa-solid fa-desktop"></i
+                  ></a>
+                  <a
+                    href="https://github.com/GangHyun95/hansalim"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
                 </div>
               </div>
             </div>
             <div class="portfolio__card" data-type="personal">
-              <img src="./images/미완작업물_썸네일.jpg" alt="" />
+              <img src="./images/STX.gif" alt="STX" />
               <div class="portfolio__card__text-box">
-                <h4>한살림 클론코딩</h4>
-                <p class="portfolio__card__desc">한살림을 클론코딩했습니다.</p>
+                <h4>STX 건설</h4>
+                <p class="portfolio__card__desc">
+                  STX 건설 사이트를 클론코딩하였습니다.
+                </p>
                 <div class="portfolio__icon__box">
-                  <i class="fa-solid fa-desktop"></i>
-                  <i class="fa-brands fa-github"></i>
+                  <a href="https://ganghyun95.github.io/stx/" target="_blank">
+                    <i class="fa-solid fa-desktop"></i
+                  ></a>
+                  <a href="https://github.com/GangHyun95/stx" target="_blank">
+                    <i class="fa-brands fa-github"></i
+                  ></a>
                 </div>
               </div>
             </div>

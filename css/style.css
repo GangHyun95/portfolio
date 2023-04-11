@@ -421,11 +421,12 @@ section {
   border-radius: 50%;
   color: var(--white-color);
   opacity: 0;
+  font-size: 18px;
   transition: all 300ms ease-in;
 }
 
 .skills__description > span {
-  width: 90%;
+  width: 95%;
   border-radius: 50%;
   text-align: center;
   font-size: 12px;
@@ -504,6 +505,7 @@ section {
 
 .portfolio__card > img.cover {
   object-fit: cover;
+  object-position: top;
 }
 
 .portfolio__card__text-box {
@@ -518,6 +520,7 @@ section {
   background-color: black;
   color: white;
   opacity: 0;
+  font-size: 14px;
   gap: 10px;
   border-radius: 10px;
   transform: translateY(70px);
@@ -529,13 +532,33 @@ section {
 }
 
 .portfolio__card__desc {
-  font-size: 14px;
   text-align: center;
+  font-weight: 400;
+}
+
+.portfolio__card__skill {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  color: var(--orange-color);
+}
+
+.portfolio__card__skill__text {
+  font-weight: 400;
+}
+
+.portfolio__card__contribution {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  color: var(--orange-color);
+}
+
+.portfolio__card__contribution__text {
+  font-weight: 400;
 }
 
 .portfolio__icon__box {
-  position: absolute;
-  bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;

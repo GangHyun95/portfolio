@@ -113,7 +113,7 @@ window.onload = function () {
           el.classList.add("up");
         }
       } else {
-        if (window.innerHeight < el.getBoundingClientRect().top + 100) {
+        if (window.innerHeight < el.getBoundingClientRect().top) {
           el.classList.remove("up");
         }
       }
@@ -127,10 +127,7 @@ window.onload = function () {
           el.classList.add("down");
         }
       } else {
-        if (
-          window.innerHeight <
-          el.getBoundingClientRect().top + el.getBoundingClientRect().height / 5
-        ) {
+        if (window.innerHeight < el.getBoundingClientRect().top) {
           el.classList.remove("down");
         }
       }
