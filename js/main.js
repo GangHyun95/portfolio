@@ -103,11 +103,6 @@ window.onload = function () {
     saDown(saDownList);
   });
 
-  window.addEventListener("resize", () => {
-    saUp(saUpList);
-    saDown(saDownList);
-  });
-
   saUp(saUpList);
   saDown(saDownList);
   // 스크롤 위로 올라오고 아래로 사라지는 애니메이션
@@ -118,10 +113,7 @@ window.onload = function () {
           el.classList.add("up");
         }
       } else {
-        if (
-          window.innerHeight <
-          el.getBoundingClientRect().top + el.getBoundingClientRect().height / 5
-        ) {
+        if (window.innerHeight < el.getBoundingClientRect().top + 100) {
           el.classList.remove("up");
         }
       }
