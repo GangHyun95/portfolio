@@ -102,6 +102,12 @@ window.onload = function () {
     saUp(saUpList);
     saDown(saDownList);
   });
+
+  window.addEventListener("resize", () => {
+    saUp(saUpList);
+    saDown(saDownList);
+  });
+
   saUp(saUpList);
   saDown(saDownList);
   // 스크롤 위로 올라오고 아래로 사라지는 애니메이션
