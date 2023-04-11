@@ -59,9 +59,11 @@ window.onload = function () {
   );
 
   const titleEntries = document.querySelectorAll(".fade");
+  const profile = document.querySelectorAll(".profile");
 
   console.log(titleEntries);
   fadeUp(titleEntries, 0.8);
+  fadeUp(profile, 0.2);
   // 버튼 색깔
   function selectNavItem(selected) {
     selectedNavItem.classList.remove("active");
