@@ -896,6 +896,9 @@ section {
     position: relative;
   }
 
+  .profile__circle {
+    display: none;
+  }
   .profile__intro {
     display: none;
   }
@@ -970,6 +973,19 @@ section {
   .home__intro__desc {
     padding: 5px;
   }
+  .desc__content {
+    font-size: 12px;
+  }
+  .home {
+    gap: 20px;
+  }
+  .home__icon {
+    margin-top: 20px;
+  }
+  .home__icon img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -981,5 +997,16 @@ section {
   }
   .portfolio__icon__box {
     font-size: 18px;
+  }
+
+  .home {
+    gap: 15px;
+  }
+  .home__icon {
+    margin-top: 15px;
+  }
+  .home__icon img {
+    width: 30px;
+    height: 30px;
   }
 }
