@@ -13,7 +13,6 @@ window.onload = function () {
   const navbarMenu = document.querySelector(".gnb");
   const navbar = document.querySelectorAll(".gnb > li");
 
-  console.log(nav);
   navbar.forEach((navbarItem) => {
     navbarItem.addEventListener("click", (e) => {
       const link = e.currentTarget.dataset.link;
@@ -61,7 +60,6 @@ window.onload = function () {
   const titleEntries = document.querySelectorAll(".fade");
   const profile = document.querySelectorAll(".profile");
 
-  console.log(titleEntries);
   fadeUp(titleEntries, 0.8);
   fadeUp(profile, 0.2);
   // 버튼 색깔
