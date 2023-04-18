@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
     />
 
-    <title>허강현</title>
+    <title>hyun's portfolio</title>
 
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -309,7 +309,7 @@
       <!-- portfolio -->
       <section class="portfolio" id="portfolio">
         <h1 class="section__title portfolio__title fade">PROJECT</h1>
-
+        <p class="portfolio__span">(PROJECT에 마우스를 hover 해 주세요.)</p>
         <div class="portfolio__categories fade">
           <button class="category__btn selected" data-filter="all">ALL</button>
           <button class="category__btn" data-filter="team">Team</button>
@@ -317,45 +317,16 @@
         </div>
         <div class="anim-up">
           <div class="portfolio__container">
-            <div class="portfolio__card" data-type="personal">
-              <img src="./images/Todo.gif" alt="todo" />
-              <div class="portfolio__card__text-box">
-                <h4>Drag&Drop Todo</h4>
-                <p class="portfolio__card__desc">
-                  React-beautiful-dnd를 사용해서 Board와 TodoList 간 Drag&Drop이
-                  가능하게 구현하였습니다.
-                </p>
-                <div class="portfolio__card__skill">
-                  <p class="portfolio__card__skill__title">주요 사용 기술</p>
-                  <span>|</span>
-                  <p class="portfolio__card__skill__text">
-                    React-beautiful-dnd,TypeScript,Recoil
-                  </p>
-                </div>
-                <div class="portfolio__icon__box">
-                  <a
-                    href="https://ganghyun95.github.io/Drag-DropToDo/"
-                    target="_blank"
-                    ><i class="fa-solid fa-desktop"></i
-                  ></a>
-                  <a
-                    href="https://github.com/GangHyun95/Drag-DropToDo"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-github"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
             <div class="portfolio__card" data-type="team">
               <img src="./images/저기요.gif" class="cover" alt="" />
               <div class="portfolio__card__text-box">
                 <h4>배달 주문 서비스(요기요 벤치마킹)</h4>
+                <p class="portfolio__sub-title">백엔드(Spring-Boot) 1차 협업</p>
                 <p class="portfolio__card__period">23.01.09 - 23.02.05</p>
                 <p class="portfolio__card__desc">
-                  백엔드와의 협업을 통한 REST API를 활용하여 가게분류, 회원가입,
-                  로그인, 유효성 검사, 장바구니, 리뷰 등록 및 삭제기능을 CRUD로
-                  구현하였습니다.
+                  백엔드(Spring-Boot)와의 협업을 통한 REST API를 활용하여
+                  가게분류, 회원가입, 로그인, 유효성 검사, 장바구니, 리뷰 등록
+                  및 삭제기능을 CRUD로 구현하였습니다.
                 </p>
                 <div class="portfolio__card__contribution">
                   <p class="portfolio__card__contribution__title">기여도</p>
@@ -384,12 +355,12 @@
               <img src="./images/Bon Voyage.gif" class="cover" alt="" />
               <div class="portfolio__card__text-box">
                 <h4>여행 일정 관리 사이트(MYRO 벤치마킹)</h4>
+                <p class="portfolio__sub-title">백엔드(Spring-Boot) 2차 협업</p>
                 <p class="portfolio__card__period">23.02.07 - 23.03.03</p>
                 <p class="portfolio__card__desc">
-                  백엔드와의 협업을 통한 REST API를 활용하여 여행지별 추천 여행
-                  장소, 식당, 숙박장소를 제공하여 보다 편리하게 여행 일정생성 할
-                  수 있습니다. 장소별 좋아요를 통해 사람들이 자주가는 여행장소를
-                  제공 합니다.
+                  백엔드(Spring-Boot)와 협업을 통한 Swagger를 이용한 REST API를
+                  활용하여 여행지별 추천 여행 장소, 식당, 숙박장소를 제공하여
+                  보다 편리하게 여행 일정 관리 사이트를 개발하였습니다.
                 </p>
                 <div class="portfolio__card__contribution">
                   <p class="portfolio__card__contribution__title">기여도</p>
@@ -417,10 +388,12 @@
               <img src="./images/쿨피스.gif" alt="쿨피스" />
               <div class="portfolio__card__text-box">
                 <h4>쿨피스 (SchoolFitness)</h4>
+                <p class="portfolio__sub-title">백엔드(Spring-Boot) 3차 협업</p>
                 <p class="portfolio__card__period">23.03.06 - 23.04.05</p>
                 <p class="portfolio__card__desc">
-                  백엔드와의 협업으로 Swagger 를 이용한 REST API를 활용하여
-                  헬스리포트를 만들었습니다.
+                  백엔드(Spring-Boot)으로 Swagger 를 이용한 REST API를 활용하여
+                  고등학교 3학년 학생들을 위한 체력 관리 서비스를
+                  개발하였습니다..
                 </p>
                 <div class="portfolio__card__contribution">
                   <p class="portfolio__card__contribution__title">기여도</p>
@@ -440,6 +413,36 @@
                     href="https://github.com/GangHyun95/schoolfitness"
                     target="_blank"
                     ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__card" data-type="personal">
+              <img src="./images/Todo.gif" alt="todo" />
+              <div class="portfolio__card__text-box">
+                <h4>Drag&Drop Todo</h4>
+                <p class="portfolio__card__desc">
+                  React-beautiful-dnd를 사용해서 Board와 TodoList 간 Drag&Drop이
+                  가능하게 구현하였습니다.
+                </p>
+                <div class="portfolio__card__skill">
+                  <p class="portfolio__card__skill__title">주요 사용 기술</p>
+                  <span>|</span>
+                  <p class="portfolio__card__skill__text">
+                    React-beautiful-dnd,TypeScript,Recoil
+                  </p>
+                </div>
+                <div class="portfolio__icon__box">
+                  <a
+                    href="https://ganghyun95.github.io/Drag-DropToDo/"
+                    target="_blank"
+                    ><i class="fa-solid fa-desktop"></i
+                  ></a>
+                  <a
+                    href="https://github.com/GangHyun95/Drag-DropToDo"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github"></i
                   ></a>
                 </div>
               </div>

@@ -485,6 +485,16 @@ section {
   background-color: var(--border-color);
 }
 
+.portfolio__title {
+  margin-bottom: 20px;
+}
+
+.portfolio__span {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .portfolio__categories {
   display: flex;
   justify-content: center;
@@ -530,6 +540,10 @@ section {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.portfolio__sub-title {
+  font-size: 12px;
+}
+
 .portfolio__card.invisible {
   display: none;
 }
@@ -560,7 +574,7 @@ section {
   color: white;
   opacity: 0;
   font-size: 14px;
-  gap: 10px;
+  gap: 6px;
   border-radius: 10px;
   transform: translateY(70px);
   transition: all 350ms ease-in;
@@ -917,6 +931,7 @@ section {
   .profile__intro__text {
     display: none;
   }
+
   .portfolio__title::after {
     content: none;
   }
