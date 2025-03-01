@@ -35,6 +35,7 @@ export default function Profile() {
                                     <ul className={styles.desc}>
                                         <li>정보처리산업기사</li>
                                         <li>컴퓨터활용능력 2급</li>
+                                        <li>1종보통운전면허</li>
                                     </ul>
                                 </div>
                             </div>

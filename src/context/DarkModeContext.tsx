@@ -13,14 +13,17 @@ interface DarkContextType {
 const DarkModeContext = createContext<DarkContextType | undefined>(undefined);
 
 export function DarkModeProvider({ children }: { children: ReactNode }) {
-    const [darkMode, setDarkMode] = useState(true);
+    const [darkMode, setDarkMode] = useState(false);
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
         updateDarkMode(!darkMode);
     };
 
     useEffect(() => {
-        const isDark = localStorage.theme === "dark" || !("theme" in localStorage);
+        const isDark =
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme:dark)").matches);
         setDarkMode(isDark);
         updateDarkMode(isDark);
     }, []);
