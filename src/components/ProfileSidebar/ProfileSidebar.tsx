@@ -78,7 +78,7 @@ export default function ProfileSidebar() {
                 </li>
             </ul>
             <div className={styles.footer}>
-                <p className={globals.copyright}>© 2024. hyun All rights reserved.</p>
+                <p className={globals.copyright}>{`© ${new Date().getFullYear()}. hyun All rights reserved.`}</p>
             </div>
         </section>
     );
