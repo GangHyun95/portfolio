@@ -111,6 +111,18 @@ export default function Profile() {
                                 <p className={styles.title}>어느정도 사용할 수 있어요.</p>
                                 <ul className={styles['skill-list']}>
                                     <li className={styles['skill-item']}>
+                                        <img className={styles['skill-img']} src="/assets/images/nodejs.svg" alt="nodejs" />
+                                        <span>Node.js</span>
+                                    </li>
+                                    <li className={styles['skill-item']}>
+                                        <img className={styles['skill-img']} src="/assets/images/express.svg" alt="express" />
+                                        <span>Express</span>
+                                    </li>
+                                    <li className={styles['skill-item']}>
+                                        <img className={styles['skill-img']} src="/assets/images/mongodb.svg" alt="mongodb" />
+                                        <span>MongoDB</span>
+                                    </li>
+                                    <li className={styles['skill-item']}>
                                         <img className={styles['skill-img']} src="/assets/images/nextjs.svg" alt="nextjs" />
                                         <span>Next.js</span>
                                     </li>
@@ -146,10 +158,6 @@ export default function Profile() {
                                     <li className={styles['skill-item']}>
                                         <img className={styles['skill-img']} src="/assets/images/prisma.svg" alt="prisma" />
                                         <span>Prisma</span>
-                                    </li>
-                                    <li className={styles['skill-item']}>
-                                        <img className={styles['skill-img']} src="/assets/images/mongodb.svg" alt="mongodb" />
-                                        <span>MongoDB</span>
                                     </li>
                                 </ul>
                             </article>

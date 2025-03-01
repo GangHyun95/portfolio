@@ -69,26 +69,38 @@ export default function Projects() {
                         ))}
                     </ul>
                     <ul className={styles['card-list']}>
-                        {filteredProjects?.map((project, index) => (
-                            <li
-                                key={project.title + index}
-                                className={styles['card-item']}
-                                onClick={() => openModal(project)}
-                            >
-                                <div className={styles['img-holder']}>
-                                    <img
-                                        className={globals['absolute-img']}
-                                        src={`/assets/images/${project.image}`}
-                                        alt={project.title}
-                                    />
-                                </div>
-                                <h2 className={styles.title}>{project.title}</h2>
-                                <button className={styles['demo-btn']}>
-                                    <span>More Info </span>
-                                    <HiArrowRight className={styles['demo-icon']} />
-                                </button>
-                            </li>
-                        ))}
+                        {filteredProjects?.map((project, index) => {
+                            const skills = project.skills.split(', ').map(skill => skill.trim());
+
+                            return (
+                                <li 
+                                    key={project.title + index} 
+                                    className={styles['card-item']} 
+                                    onClick={() => openModal(project)}
+                                >
+                                    <div className={styles['img-holder']}>
+                                        <img 
+                                            className={globals['absolute-img']} 
+                                            src={`/assets/images/${project.image}`} 
+                                            alt={project.title} 
+                                        />
+                                    </div>
+                                    <h2 className={styles.title}>{project.title}</h2>
+                                    <div className={styles['badge-container']}>
+                                        {skills.map((skill, i) => (
+                                            <span key={i} className={styles['badge']}>
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    <div className={styles.spacer}></div>
+                                    <button className={styles['demo-btn']}>
+                                        <span>More Info </span>
+                                        <HiArrowRight className={styles['demo-icon']} />
+                                    </button>
+                                </li>
+                            );
+                        })}
                     </ul>
                 </>
             )}

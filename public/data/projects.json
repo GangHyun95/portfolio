@@ -1,6 +1,16 @@
 [
     {
         "type": "Personal",
+        "title": "MERN Todo",
+        "description": "Node.js와 Express를 사용하여 CRUD 기능이 가능한 Todo 웹 애플리케이션을 개발하였습니다.\nJWT와 Zustand를 이용해 액세스 토큰 및 리프레시 토큰을 통한 로그인 유지와 API 접근 제한을 구현하였으며,\nGoogle OAuth 2.0을 통한 소셜 로그인도 지원합니다.\nuseSWR을 활용하여 클라이언트에서 효율적인 데이터 패칭을 처리하였습니다.",
+        "blogLink": "https://hy-un.tistory.com/category/Node.js/Todo",
+        "skills": "Node.js, Express, MongoDB, React, Zustand, JWT, Google OAuth 2.0, useSWR",
+        "demoLink": "https://merntodo-client.onrender.com/",
+        "githubLink": "https://github.com/GangHyun95/merntodo",
+        "image": "merntodo.png"
+    },
+    {
+        "type": "Personal",
         "title": "Pokemon",
         "description": "Poke API를 사용하여 Next.js를 기반으로 개발한 포켓몬 웹사이트입니다. \nPrisma와 MongoDB를 활용해 좋아요 및 북마크 기능을 구현하였으며, Zustand를 사용해 사용자 정보와 좋아요/북마크 데이터를 전역으로 효율적으로 관리하였습니다.",
         "blogLink": "https://hy-un.tistory.com/category/Next.js/Pokemon",
@@ -38,16 +48,6 @@
         "demoLink": "https://weather-kappa-gules.vercel.app/",
         "githubLink": "https://github.com/GangHyun95/weather",
         "image": "weather.png"
-    },
-    {
-        "type": "Personal",
-        "title": "Portfolio Web",
-        "description": "이 프로젝트는 현재 보고 계신 포트폴리오 사이트입니다. \nTistory의 RSS 피드를 이용해 최신 블로그 글을 자동으로 표시하고 있으며, 반응형으로 설계되었습니다.",
-        "blogLink": "https://hy-un.tistory.com/category/React/Portfolio",
-        "skills": "React, TypeScript, CSS Modules, Axios, React Query, Context API",
-        "demoLink": "https://portfolio-hyuns-projects-836af3ba.vercel.app/",
-        "githubLink": "https://github.com/GangHyun95/portfolio",
-        "image": "portfolio.png"
     },
     {
         "type": "Team",
