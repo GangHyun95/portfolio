@@ -1,10 +1,20 @@
 [
     {
         "type": "Personal",
+        "title": "Netflix Clone",
+        "description": "MERN 스택을 기반으로 개발한 넷플릭스 클론 웹 애플리케이션입니다.\nTailwindCSS로 전체 UI를 스타일링하였으며, 주요 기능으로는 영화 및 TV 프로그램 조회, 검색 및 검색 기록 관리, 그리고 콘텐츠에 대한 디테일 페이지 제공이 포함되어 있습니다.\nTMDB API를 활용하였고, JWT를 이용한 인증 및 권한 관리 기능을 구현하였으며, Cloudinary를 사용하여 프로필 이미지 업로드 기능을 추가하였습니다.",
+        "blogLink": "",
+        "skills": "React, TypeScript, Redux Toolkit, TailwindCSS, Node.js, Express, MongoDB, Axios, JWT, Cloudinary, TMDB API",
+        "demoLink": "https://netflix-q5vm.onrender.com/",
+        "githubLink": "https://github.com/GangHyun95/netflix",
+        "image": "netflix-clone.png"
+    },
+    {
+        "type": "Personal",
         "title": "MERN Chat App",
         "description": "MERN 스택(Node.js, Express, React, MongoDB)을 활용하여 개발한 풀스택 채팅 웹 애플리케이션입니다.\nSocket.io를 이용한 실시간 채팅 기능과 사용자의 온라인/오프라인 상태를 실시간으로 반영하며,\ndaisyUI와 TailwindCSS를 사용하여 스타일을 적용했습니다.\n주요 기능으로는 채팅 CRUD, 프로필 이미지 변경, 테마 설정 등이 있습니다.",
         "blogLink": "https://hy-un.tistory.com/category/Node.js/Chat%20App",
-        "skills": "Node.js, Express, MongoDB, React, Socket.io, daisyUI, TailwindCSS, Zustand",
+        "skills": "React, TypeScript, Zustand, TailwindCSS, Node.js, Express, MongoDB, Socket.io, daisyUI, JWT, Cloudinary",
         "demoLink": "https://chat-app-bzg0.onrender.com/",
         "githubLink": "https://github.com/GangHyun95/chat-app",
         "image": "chat-app.png"
@@ -14,7 +24,7 @@
         "title": "MERN Todo",
         "description": "Node.js와 Express를 사용하여 CRUD 기능이 가능한 Todo 웹 애플리케이션을 개발하였습니다.\nJWT와 Zustand를 이용해 액세스 토큰 및 리프레시 토큰을 통한 로그인 유지와 API 접근 제한을 구현하였으며,\nGoogle OAuth 2.0을 통한 소셜 로그인도 지원합니다.\n",
         "blogLink": "https://hy-un.tistory.com/category/Node.js/Todo",
-        "skills": "Node.js, Express, MongoDB, React, Zustand, JWT, Google OAuth 2.0, shadcn/ui",
+        "skills": "React, TypeScript, Zustand, shadcn/ui, Node.js, Express, MongoDB, JWT, Google OAuth 2.0",
         "demoLink": "https://merntodo-bd76.onrender.com/",
         "githubLink": "https://github.com/GangHyun95/merntodo",
         "image": "merntodo.png"
