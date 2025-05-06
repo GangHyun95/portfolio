@@ -36,10 +36,6 @@ export default function ModalContent({ project }: {project: ProjectType}) {
                             {' '}에서 확인하실 수 있습니다.
                         </p>
                     )}
-                    <ul className={styles['modal-skils']}>
-                        <span>주요 기술</span>
-                        <p className={styles.skill}>{project.skills}</p>
-                    </ul>
                 </div>
                 <div className={styles.btns}>
                     <a href={project.githubLink} target='_blank' className={styles.btn}>
