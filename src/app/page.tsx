@@ -1,5 +1,10 @@
+import { AboutSection, HeroSection } from '@/app/components/section';
+
 export default function Home() {
   return (
-    <>ddsssss</>
+    <>
+      <HeroSection />
+      <AboutSection />
+    </>
   );
 }

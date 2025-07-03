@@ -8,7 +8,7 @@ import ThemeToggleButton from './ThemeToggleButton';
 
 export default function Navbar() {
     return (
-        <header className='fixed inset-0 flex flex-col h-15'>
+        <header className='fixed inset-0 flex flex-col h-12 backdrop-blur-lg bg-background/50 z-50 md:h-15'>
             <nav className='flex-1 flex items-center container mx-auto'>
                 <Link href='#hero' className='flex items-center h-full text-2xl font-bold'>
                     Hy<span className='text-primary'>un</span>

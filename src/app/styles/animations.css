@@ -1,57 +1,29 @@
 @layer utilities {
-    .star {
-        @apply absolute rounded-full bg-white;
-        box-shadow: 0 0 10px 2px rgba(255 255 255 / 0.4);
-    }
-
-    .meteor {
-        @apply absolute rounded-full;
-        background: linear-gradient(to right, #fff, #fff, transparent);
-        box-shadow: 0 0 10px 5px rgba(255 255 255 / 0.3);
-    }
-
     .bubble {
         @apply absolute rounded-full backdrop-blur-sm;
-        background-color: rgba(127, 108, 224);
+        background-color: var(--color-primary);
     }
 
-    .animate-pulse-subtle {
-        animation: pulse-subtle 4s ease-in-out infinite;
-    }
-
-    .animate-meteor {
-        animation: meteor 5s linear infinite;
-        animation-fill-mode: backwards;
-    }
     .animate-bubble {
         animation-name: bubble-rise;
         animation-timing-function: ease-out;
         animation-iteration-count: infinite;
-        animation-fill-mode: forwards;
     }
-}
 
-@keyframes pulse-subtle {
-    0%,
-    100% {
-        opacity: 0.7;
+    .animate-fade-in {
+        animation: fade-in 0.7s ease-out both;
     }
-    50% {
-        opacity: 1;
+    .animate-fade-in-delay-1 {
+        animation: fade-in 0.7s ease-out 0.2s both;
     }
-}
-
-@keyframes meteor {
-    0% {
-        transform: rotate(215deg) translateX(0);
-        opacity: 0;
+    .animate-fade-in-delay-2 {
+        animation: fade-in 0.7s ease-out 0.4s both;
     }
-    70% {
-        opacity: 1;
+    .animate-fade-in-delay-3 {
+        animation: fade-in 0.7s ease-out 0.6s both;
     }
-    100% {
-        transform: rotate(215deg) translateX(-500px);
-        opacity: 0;
+    .animate-fade-in-delay-4 {
+        animation: fade-in 0.7s ease-out 0.8s both;
     }
 }
 
@@ -66,5 +38,16 @@
     100% {
         transform: translateY(-120vh);
         opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

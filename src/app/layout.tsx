@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { ThemeProvider } from 'next-themes';
 
-import ThemeBackground from '@/app/components/background';
+import BubbleBackground from '@/app/components/BubbleBackground';
 import Navbar from '@/app/components/navbar';
 
 import '@/app/styles/globals.css';
@@ -38,7 +38,7 @@ export default function RootLayout({
                     defaultTheme='system'
                     enableSystem
                 >
-                    <ThemeBackground />
+                    <BubbleBackground />
                     <Navbar />
                     <main>
                         {children}
