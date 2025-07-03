@@ -1,21 +1,16 @@
 import Link from 'next/link';
 
+import { navItems } from '@/app/constants/navItems';
+
 import HamburgetButton from './HamburgerButton';
 import ThemeToggleButton from './ThemeToggleButton';
 
-const navItems = [
-    { label: 'Home', href: '#hero' },
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
-] as const;
 
 export default function Navbar() {
     return (
-        <header className='flex flex-col h-15'>
+        <header className='fixed inset-0 flex flex-col h-15'>
             <nav className='flex-1 flex items-center container mx-auto'>
-                <Link href='#hero' className='flex items-center h-full text-xl font-bold'>
+                <Link href='#hero' className='flex items-center h-full text-2xl font-bold'>
                     Hy<span className='text-primary'>un</span>
                 </Link>
 

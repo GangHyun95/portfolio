@@ -6,7 +6,7 @@ import { ThemeProvider } from 'next-themes';
 import ThemeBackground from '@/app/components/background';
 import Navbar from '@/app/components/navbar';
 
-import '@/styles/globals.css';
+import '@/app/styles/globals.css';
 
 const pretendard = localFont({
     src: [
@@ -40,7 +40,9 @@ export default function RootLayout({
                 >
                     <ThemeBackground />
                     <Navbar />
-                    {children}
+                    <main>
+                        {children}
+                    </main>
                 </ThemeProvider>
             </body>
         </html>

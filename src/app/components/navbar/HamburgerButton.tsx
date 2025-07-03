@@ -1,42 +1,64 @@
 'use client';
 
-import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { Button } from '@/app/components/ui/button';
+import {
+    Sheet,
+    SheetClose,
+    SheetContent,
+    SheetTitle,
+    SheetTrigger,
+} from '@/app/components/ui/sheet';
+import { navItems } from '@/app/constants/navItems';
+import { cn } from '@/app/lib/utils';
 
 export default function HamburgetButton() {
-    const [open, setOpen] = useState(false);
-
     return (
-        <Button
-            variant='ghost'
-            size='icon'
-            className='md:hidden rounded-full relative'
-            onClick={() => setOpen(prev => !prev)}
-            aria-label='Toggle menu'
-            aria-expanded={open}
-        >
-            <span
-                className={cn(
-                    'absolute h-0.5 w-5 bg-foreground transition-all duration-300 origin-center',
-                    open ? 'rotate-45 translate-y-0' : '-translate-y-[7px]'
-                )}
-            />
+        <Sheet>
+            <form>
+                <SheetTrigger asChild>
+                    <Button
+                        variant='ghost'
+                        size='icon'
+                        className='md:hidden rounded-full relative'
+                        aria-label='Toggle menu'
+                    >
+                        <Menu className='size-6'/>
+                    </Button>
+                </SheetTrigger>
 
-            <span
-                className={cn(
-                    'absolute h-0.5 w-5 bg-foreground transition-opacity duration-300',
-                    open ? 'opacity-0' : 'opacity-100'
-                )}
-            />
-
-            <span
-                className={cn(
-                    'absolute h-0.5 w-5 bg-foreground transition-all duration-300 origin-center',
-                    open ? '-rotate-45 translate-y-0' : 'translate-y-[7px]'
-                )}
-            />
-        </Button>
+                <SheetContent 
+                    className={cn(
+                        'fixed inset-0 z-50 w-screen h-screen max-w-none sm:max-w-none rounded-none border-none',
+                        'top-0 left-0 translate-x-0 translate-y-0',
+                        'bg-background/95 backdrop-blur-md',
+                        '[&>button:last-child]:hidden'
+                        
+                    )}>
+                    <SheetTitle className='sr-only'>Mobile Menu</SheetTitle>
+                    
+                    <SheetClose asChild>
+                        <Button
+                            variant='ghost'
+                            size='icon'
+                            className='absolute top-3 right-4 z-50 rounded-full'
+                            aria-label='Close menu'
+                        >
+                            <X className='size-6' />
+                        </Button>
+                    </SheetClose>
+                        <ul className='flex flex-col justify-center items-center flex-1 text-foreground/80'>
+                            {navItems.map((item, index) => (
+                                <li key={index} className='flex w-full justify-center'>
+                                    <SheetClose asChild>
+                                        <a href={item.href} className='grow flex justify-center items-center py-4'>{item.label}</a>
+                                    </SheetClose>
+                                </li>
+                            ))}
+                        </ul>
+                </SheetContent>
+            </form>
+        </Sheet>
     );
 }
