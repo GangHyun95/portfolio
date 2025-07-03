@@ -1,15 +1,19 @@
+/* eslint-disable import/order */
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import { ThemeProvider } from 'next-themes';
 
 import ThemeBackground from '@/app/components/background';
-import './globals.css';
+import Navbar from '@/app/components/navbar';
+
+import '@/styles/globals.css';
 
 const pretendard = localFont({
     src: [
         { path: '../fonts/Pretendard-Regular.woff2', weight: '400' },
-        { path: '../fonts/Pretendard-Medium.woff2',  weight: '500' },
+        { path: '../fonts/Pretendard-Medium.woff2', weight: '500' },
         { path: '../fonts/Pretendard-SemiBold.woff2', weight: '600' },
-        { path: '../fonts/Pretendard-Bold.woff2',    weight: '700' },
+        { path: '../fonts/Pretendard-Bold.woff2', weight: '700' },
         { path: '../fonts/Pretendard-ExtraBold.woff2', weight: '800' },
     ],
     variable: '--font-pretendard',
@@ -27,12 +31,17 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang='en' data-theme='light'>
-            <body
-                className={`${pretendard.variable} antialiased min-h-screen`}
-            >
-                <ThemeBackground />
-                {children}
+        <html lang='en' suppressHydrationWarning>
+            <body className={`${pretendard.variable} antialiased min-h-screen`}>
+                <ThemeProvider
+                    attribute='class'
+                    defaultTheme='system'
+                    enableSystem
+                >
+                    <ThemeBackground />
+                    <Navbar />
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );

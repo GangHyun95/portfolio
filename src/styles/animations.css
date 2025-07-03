@@ -1,30 +1,3 @@
-@import 'tailwindcss';
-
-:root {
-    /* dark */
-    --primary-dark: rgb(127, 108, 224);
-    --background-dark: rgb(0, 0, 0);
-    --foreground-dark: rgb(255, 255, 255);
-
-    /* light */
-    --primary-light: rgb(127, 108, 224);
-    --background-light: rgb(255, 255, 255);
-    --foreground-light: rgb(0, 0, 0);
-}
-
-html[data-theme='light'] {
-    --primary: var(--primary-light);
-    --background: var(--background-light);
-    --foreground: var(--foreground-light);
-}
-
-html[data-theme='dark'] {
-    --primary: var(--primary-dark);
-    --background: var(--background-dark);
-    --foreground: var(--foreground-dark);
-}
-
-
 @layer utilities {
     .star {
         @apply absolute rounded-full bg-white;
@@ -39,7 +12,7 @@ html[data-theme='dark'] {
 
     .bubble {
         @apply absolute rounded-full backdrop-blur-sm;
-        background-color: rgba(127, 108, 224, 0.5);
+        background-color: rgba(127, 108, 224);
     }
 
     .animate-pulse-subtle {
@@ -94,10 +67,4 @@ html[data-theme='dark'] {
         transform: translateY(-120vh);
         opacity: 0;
     }
-}
-
-body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-pretendard), sans-serif;
 }
