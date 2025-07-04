@@ -4,22 +4,14 @@ import Link from 'next/link';
 
 import GithubSvg from '@/components/icons/GithubSvg';
 import { cn } from '@/lib/utils';
-
-type Project = {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-    tags: string[];
-    demoUrl: string;
-    githubUrl: string;
-}
+import { Project } from '@/types/project';
 
 type Props = {
     project: Project;
 };
 
 export default function ProjectCard({ project }: Props) {
+    const { thumbnail, title, description, tech_stack, demo_url, github_url } = project;
     return (
         <div 
             className={cn(
@@ -31,14 +23,18 @@ export default function ProjectCard({ project }: Props) {
             <div className='relative w-full'>
                 <div className='pb-[56.25%]' />
                 <Image
-                    src={project.image}
-                    alt={project.title}
+                    src={thumbnail}
+                    alt={title}
                     fill
                     className='object-cover transition-transform duration-500'
                 />
                 <Link
                     href='/'
-                    className='absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100'
+                    className={cn(
+                        "absolute inset-0 flex items-center justify-center transition-opacity duration-300",
+                        "bg-black/50",
+                        "opacity-100 md:opacity-0 md:group-hover:opacity-100"
+                    )}
                 >
                     <button
                         type="button"
@@ -55,22 +51,22 @@ export default function ProjectCard({ project }: Props) {
 
             <div className='px-5 py-4'>
                 <div className='flex flex-wrap gap-2 mb-4'>
-                    {project.tags.map((tag) => (
+                    {tech_stack.map((stack) => (
                         <span
-                            key={tag}
+                            key={stack}
                             className='px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground'
                         >
-                            {tag}
+                            {stack}
                         </span>
                     ))}
                 </div>
 
-                <h3 className='text-xl font-semibold mb-1'>{project.title}</h3>
-                <p className='text-muted-foreground text-sm mb-4'>{project.description}</p>
+                <h3 className='text-xl font-semibold mb-1'>{title}</h3>
+                <p className='text-muted-foreground text-sm mb-4'>{description}</p>
 
                 <div className='flex space-x-3'>
                     <a
-                        href={project.demoUrl}
+                        href={demo_url}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='text-foreground/80 hover:text-primary transition-colors duration-300'
@@ -78,7 +74,7 @@ export default function ProjectCard({ project }: Props) {
                         <ExternalLink size={20} />
                     </a>
                     <a
-                        href={project.githubUrl}
+                        href={github_url}
                         target='_blank'
                         rel='noopener noreferrer'
                     >

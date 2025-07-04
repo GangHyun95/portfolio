@@ -1,45 +1,10 @@
 import { ArrowRight } from 'lucide-react';
 
 import ProjectCard from '@/components/section/projects/ProjectCard';
+import { getAllProjects } from '@/service/projects';
 
-const projects = [
-    {
-        id: 1,
-        title: 'X-Clone',
-        description:
-            'PostgreSQL, Node.js, Express, React를 사용해 X(Twitter) 클론을 구현했습니다. TanStack Query로 캐시된 데이터를 전역 상태처럼 효율적으로 관리했으며, 재사용 가능한 무한 스크롤 커스텀 훅을 작성해 여러 화면에 적용했습니다.',
-        image: '/projects/x-clone.png',
-        tags: ['PostgreSQL', 'Express', 'Node.js', 'React', 'TanStack Query'],
-        demoUrl: '#',
-        body: '',
-        githubUrl: 'https://github.com/GangHyun95/x-clone',
-    },
-    {
-        id: 2,
-        title: 'X-Clone',
-        description:
-            'PostgreSQL, Node.js, Express, React를 사용해 X(Twitter) 클론을 구현했습니다. TanStack Query로 캐시된 데이터를 전역 상태처럼 효율적으로 관리했으며, 재사용 가능한 무한 스크롤 커스텀 훅을 작성해 여러 화면에 적용했습니다.',
-        image: '/projects/x-clone.png',
-        tags: ['PostgreSQL', 'Express', 'Node.js', 'React', 'TanStack Query'],
-        demoUrl: '#',
-        body: '',
-        githubUrl: 'https://github.com/GangHyun95/x-clone',
-    },
-
-    {
-        id: 3,
-        title: 'X-Clone',
-        description:
-            'PostgreSQL, Node.js, Express, React를 사용해 X(Twitter) 클론을 구현했습니다. TanStack Query로 캐시된 데이터를 전역 상태처럼 효율적으로 관리했으며, 재사용 가능한 무한 스크롤 커스텀 훅을 작성해 여러 화면에 적용했습니다.',
-        image: '/projects/x-clone.png',
-        tags: ['PostgreSQL', 'Express', 'Node.js', 'React', 'TanStack Query'],
-        demoUrl: '#',
-        githubUrl: 'https://github.com/GangHyun95/x-clone',
-    },
-];
-
-
-export default function ProjectsSection() {
+export default async function ProjectsSection() {
+    const projects = await getAllProjects();
     return (
         <section id='projects' className='py-24 px-4 relative'>
             <div className='container mx-auto max-w-5xl'>
