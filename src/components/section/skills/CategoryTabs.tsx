@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 type Props = {
     categories: string[];
@@ -12,18 +12,14 @@ export default function CategoryTabs({ categories, activeCategory, onChange }: P
     return (
         <div className='flex flex-wrap justify-center gap-4 mb-12'>
             {categories.map((category) => (
-                <button
+                <Button
                     key={category}
                     onClick={() => onChange(category)}
-                    className={cn(
-                        'px-5 py-2 rounded-full transition-colors duration-300 capitalize',
-                        activeCategory === category
-                            ? 'bg-primary text-primary-foreground'
-                            : 'bg-secondary/70 text-foreground hover:bg-secondary'
-                    )}
+                    variant={activeCategory === category ? 'default' : 'secondary'}
+                    className='px-5 py-2 rounded-full capitalize'
                 >
                     {category}
-                </button>
+                </Button>
             ))}
         </div>
     );

@@ -1,5 +1,7 @@
 import { Briefcase, Calendar, GraduationCap, MapPin, Smartphone, User } from 'lucide-react';
 
+import { cn } from '@/lib/utils';
+
 export default function About() {
     return (
         <section id='about' className='py-24 px-4 relative'>
@@ -40,68 +42,93 @@ export default function About() {
                         </div>
                     </div>
 
-                    <div className='grid grid-cols-1 space-y-4'>
-                        <div className='p-6 transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg'>
-                            <div className='flex items-start gap-4'>
-                                <div className='p-3 rounded-full bg-primary/10'>
+                    <div className='grid grid-cols-1'>
+                        <div
+                            className={cn(
+                                'flex flex-col items-start justify-center p-6',
+                                'transition-transform duration-300',
+                                'hover:scale-[1.02] hover:shadow-lg'
+                            )}
+                        >
+                            <div className='flex items-center mb-3'>
+                                <div className='p-3 rounded-full bg-primary/10 mr-3'>
                                     <Briefcase className='h-6 w-6 text-primary' />
                                 </div>
-                                <div className='text-left'>
-                                    <h4 className='font-semibold text-lg'>
-                                        엔디소프트(주) · 연구원
-                                    </h4>
-                                    <p className='text-sm text-muted-foreground mb-1'>
-                                        2023.07.01 ~ 2024.08.01
-                                    </p>
-
-                                    <ul className='text-muted-foreground text-sm space-y-1'>
-                                        <li className='li-dash'>
-                                            CMS 어드민 기능 개선 및 신규 기능 개발
-                                        </li>
-                                        <li className='li-dash'>
-                                            jQuery 의존성 제거 및 바닐라 JS 리팩터링
-                                        </li>
-                                        <li className='li-dash'>
-                                            WAMP 기반 PHP 연동 프론트엔드 개발
-                                        </li>
-
-                                    </ul>
+                                <div className='flex flex-col'>
+                                    <h4 className='font-semibold text-lg'>경력</h4>
                                 </div>
                             </div>
+                            <ul className='text-muted-foreground text-sm space-y-1'>
+                                <div className='mb-2'>
+                                    <p className='text-base text-foreground pl-4'>
+                                        엔디소프트(주) · 연구원
+                                    </p>
+                                    <p className='text-xs text-muted-foreground pl-4'>
+                                        (2023.07.01 – 2024.08.01)
+                                    </p>
+                                </div>
+                                <li className='li-dash'>
+                                    CMS 어드민 기능 개선 및 신규 기능 개발
+                                </li>
+                                <li className='li-dash'>
+                                    jQuery 의존성 제거 및 바닐라 JS 리팩터링
+                                </li>
+                                <li className='li-dash'>
+                                    WAMP 기반 PHP 연동 프론트엔드 개발
+                                </li>
+                            </ul>
                         </div>
-                        <div className='p-6 transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg'>
-                            <div className='flex items-start gap-4'>
-                                <div className='p-3 rounded-full bg-primary/10'>
+                        
+                        <div
+                            className={cn(
+                                'flex flex-col items-start justify-center p-6',
+                                'transition-transform duration-300',
+                                'hover:scale-[1.02] hover:shadow-lg'
+                            )}
+                        >
+                            <div className='flex items-center mb-3'>
+                                <div className='p-3 rounded-full bg-primary/10 mr-3'>
                                     <GraduationCap className='h-6 w-6 text-primary' />
                                 </div>
-                                <div className='text-left'>
-                                    <h4 className='font-semibold text-lg'>교육 이수</h4>
-                                    <ul className='text-muted-foreground text-sm space-y-2'>
-                                        <li className='li-dash'>
-                                            [KDT] 기업요구 반영 프론트엔드 개발자 양성과정<br />
-                                            (2022.10.28 ~ 2023.04.13)
-                                        </li>
-                                    </ul>
+                                <div className='flex flex-col'>
+                                    <h4 className='font-semibold text-lg'>
+                                        교육 이수
+                                    </h4>
                                 </div>
                             </div>
+                            <ul className='text-muted-foreground text-sm space-y-1'>
+                                <li className='li-dash'>
+                                    [KDT] 기업요구 반영 프론트엔드 개발자 양성과정<br />
+                                    (2022.10.28 ~ 2023.04.13)
+                                </li>
+                            </ul>
                         </div>
-                        <div className='p-6 transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg'>
-                            <div className='flex items-start gap-4'>
-                                <div className='p-3 rounded-full bg-primary/10'>
+
+                        <div
+                            className={cn(
+                                'flex flex-col items-start justify-center p-6',
+                                'transition-transform duration-300',
+                                'hover:scale-[1.02] hover:shadow-lg'
+                            )}
+                        >
+                            <div className='flex items-center mb-3'>
+                                <div className='p-3 rounded-full bg-primary/10 mr-3'>
                                     <User className='h-6 w-6 text-primary' />
                                 </div>
-                                <div className='text-left'>
-                                    <h4 className='font-semibold text-lg'>자격증</h4>
-                                    <ul className='text-muted-foreground text-sm space-y-1'>
-                                        <li className='li-dash'>
-                                            정보처리산업기사
-                                        </li>
-                                        <li className='li-dash'>
-                                            컴퓨터활용능력 2급
-                                        </li>
-                                    </ul>
+                                <div className='flex flex-col'>
+                                    <h4 className='font-semibold text-lg'>
+                                        자격증
+                                    </h4>
                                 </div>
                             </div>
+                            <ul className='text-muted-foreground text-sm space-y-1'>
+                                <li className='li-dash'>
+                                    정보처리산업기사
+                                </li>
+                                <li className='li-dash'>
+                                    컴퓨터활용능력 2급
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
