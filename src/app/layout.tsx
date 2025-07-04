@@ -2,11 +2,10 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
-import BubbleBackground from '@/app/components/BubbleBackground';
-import Navbar from '@/app/components/navbar';
-import ThemeProviderWrapper from '@/app/components/ThemeProviderWrapper';
-
-import '@/app/styles/globals.css';
+import BubbleBackground from '@/components/BubbleBackground';
+import Navbar from '@/components/navbar';
+import ThemeProviderWrapper from '@/components/ThemeProviderWrapper';
+import './styles/globals.css'
 
 const pretendard = localFont({
     src: [

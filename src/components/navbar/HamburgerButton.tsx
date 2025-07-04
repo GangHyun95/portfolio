@@ -2,16 +2,16 @@
 
 import { Menu, X } from 'lucide-react';
 
-import { Button } from '@/app/components/ui/button';
+import { Button } from '@/components/ui/button';
 import {
     Sheet,
     SheetClose,
     SheetContent,
     SheetTitle,
     SheetTrigger,
-} from '@/app/components/ui/sheet';
-import { navItems } from '@/app/constants/navItems';
-import { cn } from '@/app/lib/utils';
+} from '@/components/ui/sheet';
+import { navItems } from '@/constants/navItems';
+import { cn } from '@/lib/utils';
 
 export default function HamburgetButton() {
     return (

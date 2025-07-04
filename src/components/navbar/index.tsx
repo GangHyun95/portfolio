@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { navItems } from '@/app/constants/navItems';
+import { navItems } from '@/constants/navItems';
 
 import HamburgetButton from './HamburgerButton';
 import ThemeToggleButton from './ThemeToggleButton';
