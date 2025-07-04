@@ -1,6 +1,6 @@
 import { ArrowDown } from 'lucide-react';
 
-export default function HeroSection() {
+export default function Hero() {
     return (
         <section id='hero' className='relative min-h-screen flex flex-col items-center justify-center px-4'>
             <div className='container max-w-5xl mx-auto text-center z-10 font-bold'>

@@ -1,6 +1,6 @@
 import { Briefcase, Calendar, GraduationCap, MapPin, Smartphone, User } from 'lucide-react';
 
-export default function AboutSection() {
+export default function About() {
     return (
         <section id='about' className='py-24 px-4 relative'>
             <div className='container mx-auto max-w-5xl'>

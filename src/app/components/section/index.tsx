@@ -1,2 +1,3 @@
-export { default as HeroSection } from './HeroSection';
-export { default as AboutSection } from './AboutSection';
+export { default as HeroSection } from './Hero';
+export { default as AboutSection } from './About';
+export { default as SkillsSection } from './skills';

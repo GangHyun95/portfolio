@@ -1,10 +1,10 @@
 /* eslint-disable import/order */
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import { ThemeProvider } from 'next-themes';
 
 import BubbleBackground from '@/app/components/BubbleBackground';
 import Navbar from '@/app/components/navbar';
+import ThemeProviderWrapper from '@/app/components/ThemeProviderWrapper';
 
 import '@/app/styles/globals.css';
 
@@ -33,17 +33,13 @@ export default function RootLayout({
     return (
         <html lang='en' suppressHydrationWarning>
             <body className={`${pretendard.variable} antialiased min-h-screen`}>
-                <ThemeProvider
-                    attribute='class'
-                    defaultTheme='system'
-                    enableSystem
-                >
+                <ThemeProviderWrapper>
                     <BubbleBackground />
                     <Navbar />
                     <main>
                         {children}
                     </main>
-                </ThemeProvider>
+                </ThemeProviderWrapper>
             </body>
         </html>
     );
