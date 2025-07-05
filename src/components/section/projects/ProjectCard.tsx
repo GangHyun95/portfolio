@@ -11,7 +11,7 @@ type Props = {
 };
 
 export default function ProjectCard({ project }: Props) {
-    const { thumbnail, title, description, tech_stack, demo_url, github_url } = project;
+    const { thumbnail, title, description, tech_stack, slug, demo_url, github_url } = project;
     return (
         <div 
             className={cn(
@@ -26,22 +26,24 @@ export default function ProjectCard({ project }: Props) {
                     src={thumbnail}
                     alt={title}
                     fill
+                    sizes='(min-width: 768px) 50vw, 100vw'
                     className='object-cover transition-transform duration-500'
                 />
                 <Link
-                    href='/'
+                    href={`/${slug}`}
+                    scroll={false}
                     className={cn(
-                        "absolute inset-0 flex items-center justify-center transition-opacity duration-300",
-                        "bg-black/50",
-                        "opacity-100 md:opacity-0 md:group-hover:opacity-100"
+                        'absolute inset-0 flex items-center justify-center transition-opacity duration-300',
+                        'bg-black/50',
+                        'opacity-100 md:opacity-0 md:group-hover:opacity-100'
                     )}
                 >
                     <button
-                        type="button"
+                        type='button'
                         className={cn(
-                            "px-8 py-3 rounded-sm text-sm border border-white cursor-pointer",
-                            "text-white hover:bg-white hover:text-black",
-                            "transition-colors"
+                            'px-8 py-3 rounded-sm text-sm border border-white cursor-pointer',
+                            'text-white hover:bg-white hover:text-black',
+                            'transition-colors'
                         )}
                     >
                         자세히 보기
