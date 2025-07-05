@@ -1,7 +1,7 @@
 import CloseButton from '@/components/modal/CloseButton';
 import { getProject } from '@/service/projects';
 
-export default async function ProjectModal({ params }: { params: { slug: string } }) {
+export default async function ProjectModal({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const project = await getProject(slug);
 

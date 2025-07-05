@@ -14,6 +14,7 @@ export default function ContactSection() {
                     <Link
                         href='/contact-form'
                         className='cosmic-button w-fit flex items-center mx-auto gap-2 text-xl'
+                        scroll={false}
                     >
                         Send Mail!
                     </Link>
