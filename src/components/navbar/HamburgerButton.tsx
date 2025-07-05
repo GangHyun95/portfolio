@@ -2,6 +2,8 @@
 
 import { Menu, X } from 'lucide-react';
 
+import Link from 'next/link';
+
 import { Button } from '@/components/ui/button';
 import {
     Sheet,
@@ -52,7 +54,7 @@ export default function HamburgetButton() {
                             {navItems.map((item, index) => (
                                 <li key={index} className='flex w-full justify-center'>
                                     <SheetClose asChild>
-                                        <a href={item.href} className='grow flex justify-center items-center py-4'>{item.label}</a>
+                                        <Link href={item.href} replace className='grow flex justify-center items-center py-4'>{item.label}</Link>
                                     </SheetClose>
                                 </li>
                             ))}

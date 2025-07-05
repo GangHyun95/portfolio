@@ -1,4 +1,5 @@
 import { ArrowDown } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Hero() {
     return (
@@ -16,7 +17,7 @@ export default function Hero() {
                 </div>
 
                 <div className='pt-5 animate-fade-in' style={{ animationDelay: '800ms' }}>
-                    <a href='#projects' className='cosmic-button'>View My Work</a>
+                    <Link href='#projects' replace className='cosmic-button'>View My Work</Link>
                 </div>
             </div>
 
