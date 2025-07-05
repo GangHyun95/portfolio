@@ -5,7 +5,8 @@ import localFont from 'next/font/local';
 import BubbleBackground from '@/components/BubbleBackground';
 import Navbar from '@/components/navbar';
 import ThemeProviderWrapper from '@/components/ThemeProviderWrapper';
-import './styles/globals.css'
+import './styles/globals.css';
+import 'react-notion-x/src/styles.css';
 
 const pretendard = localFont({
     src: [

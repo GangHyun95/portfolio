@@ -11,5 +11,5 @@ export type Project = {
 };
 
 export type ProjectDetail = Project & {
-    notion_url: string;
+    notion_id: string;
 };
