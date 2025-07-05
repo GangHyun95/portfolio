@@ -14,7 +14,7 @@ export default function CloseButton() {
             onClick={() => router.back()}
             className='rounded-full'
         >
-            <X />
+            <X className='size-6'/>
         </Button>
     );
 }

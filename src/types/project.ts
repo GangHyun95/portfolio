@@ -11,5 +11,5 @@ export type Project = {
 };
 
 export type ProjectDetail = Project & {
-    body_md: string;
+    notion_url: string;
 };

@@ -1,4 +1,4 @@
-import { Briefcase, Calendar, GraduationCap, MapPin } from 'lucide-react';
+import { Briefcase, Calendar, GraduationCap, MapPin, Smartphone } from 'lucide-react';
 
 import Link from 'next/link';
 
@@ -11,7 +11,7 @@ export default function About() {
                 <h2 className='text-3xl md:text-5xl font-bold mb-12 text-center'>About <span className='text-primary'>Me</span></h2>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-12 place-items-center'>
-                    <div className='space-y-5'>
+                    <div className='space-y-4'>
                         <h3 className='text-2xl font-semibold'>작은 개선이 모여 큰 변화를 만든다고 생각합니다.</h3>
                         <ul className='text-muted-foreground space-y-2'>
                             <li className='flex items-center gap-2'>
@@ -21,6 +21,10 @@ export default function About() {
                             <li className='flex items-center gap-2'>
                                 <MapPin className='w-4 h-4 text-primary' />
                                 대구
+                            </li>
+                            <li className='flex items-center gap-2'>
+                                <Smartphone className='w-4 h-4 text-primary' />
+                                +82 10.5434.1031
                             </li>
                         </ul>
 

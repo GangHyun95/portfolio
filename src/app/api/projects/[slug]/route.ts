@@ -4,7 +4,7 @@ export async function GET(_req: Request, context: { params: Promise<{ slug: stri
     const { slug } = await context.params;
     const { data, error } = await supabase
         .from('projects')
-        .select('id, slug, title, description, thumbnail, tech_stack, demo_url, github_url, body_md, created_at')
+        .select('id, slug, title, description, thumbnail, tech_stack, demo_url, github_url, notion_url, created_at')
         .eq('slug', slug)
         .single();
 
