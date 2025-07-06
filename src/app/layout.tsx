@@ -27,6 +27,23 @@ export const metadata: Metadata = {
     icons: {
         icon: '/favicon.ico',
     },
+    openGraph: {
+        title: 'Hyun | Frontend Developer',
+        description: 'Hyun\'s personal portfolio site. About me, Skills, Projects, and contact.',
+        url: 'https://portfolio-xi-three-59.vercel.app/',
+        siteName: 'Hyun Portfolio',
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Hyun Portfolio',
+            },
+        ],
+        locale: 'ko_KR',
+        type: 'website',
+    },
+    metadataBase: new URL('https://portfolio-xi-three-59.vercel.app/'),
 };
 
 export default function RootLayout({
@@ -37,7 +54,7 @@ export default function RootLayout({
     modal: React.ReactNode;
 }>) {
     return (
-        <html lang='en' suppressHydrationWarning>
+        <html lang='ko' suppressHydrationWarning>
             <body className={`${pretendard.variable} antialiased min-h-screen`}>
                 <ThemeProviderWrapper>
                     <Toaster richColors position='top-center'/>

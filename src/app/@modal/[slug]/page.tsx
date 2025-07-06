@@ -1,8 +1,8 @@
 import { ExternalLink } from 'lucide-react';
 
 import GithubSvg from '@/components/icons/GithubSvg';
-import BodyScrollLock from '@/components/modal/BodyScrollLock';
 import CloseButton from '@/components/modal/CloseButton';
+import ModalWrapper from '@/components/modal/ModalWrapper';
 import NotionWrapper from '@/components/modal/notion/NotionWrapper';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -13,9 +13,7 @@ export default async function ProjectModal({ params }: { params: Promise<{ slug:
     const project = await getProject(slug);
 
     return (
-        <>
-            <BodyScrollLock />
-            <div className='fixed inset-0 z-50 bg-black/50' />
+        <ModalWrapper>
             <div className='fixed inset-0 z-50 flex items-center justify-center pointer-events-none'>
                 <div className={cn(
                     'flex flex-col w-full h-full p-0 rounded-none max-w-none',
@@ -63,6 +61,6 @@ export default async function ProjectModal({ params }: { params: Promise<{ slug:
                     </div>
                 </div>
             </div>
-        </>
+        </ModalWrapper>
     );
 }

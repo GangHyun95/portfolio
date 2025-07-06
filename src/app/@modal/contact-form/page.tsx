@@ -1,15 +1,13 @@
 import { Mail } from 'lucide-react';
 
-import BodyScrollLock from '@/components/modal/BodyScrollLock';
 import CloseButton from '@/components/modal/CloseButton';
 import ContactForm from '@/components/modal/contact/ContactForm';
+import ModalWrapper from '@/components/modal/ModalWrapper';
 import { cn } from '@/lib/utils';
 
 export default function ContactFormModal() {
     return (
-        <>
-            <BodyScrollLock />
-            <div className='fixed inset-0 z-50 bg-black/50' />
+        <ModalWrapper>
             <div className='fixed inset-0 z-50 flex items-center justify-center pointer-events-none'>
                 <div className={cn(
                     'flex flex-col gap-4 w-full h-full p-0 rounded-none max-w-none',
@@ -30,6 +28,6 @@ export default function ContactFormModal() {
                     </section>
                 </div>
             </div>
-        </>
+        </ModalWrapper>
     );
 }
