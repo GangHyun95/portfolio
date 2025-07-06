@@ -25,7 +25,7 @@ export default function ContactForm() {
                 icon: <MailCheck className='size-4' />,
             })
         } catch (err) {
-            console.log(err);
+            console.error(err);
             toast.error('메일 전송에 실패했습니다.', {
                 icon: <MailWarning className='size-4' />,
             });

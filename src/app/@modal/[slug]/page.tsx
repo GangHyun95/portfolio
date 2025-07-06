@@ -1,10 +1,9 @@
 import { ExternalLink } from 'lucide-react';
-import { NotionAPI } from 'notion-client';
 
 import GithubSvg from '@/components/icons/GithubSvg';
 import BodyScrollLock from '@/components/modal/BodyScrollLock';
 import CloseButton from '@/components/modal/CloseButton';
-import NotionContent from '@/components/NotionContent';
+import NotionWrapper from '@/components/modal/notion/NotionWrapper';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { getProject } from '@/service/projects';
@@ -12,9 +11,6 @@ import { getProject } from '@/service/projects';
 export default async function ProjectModal({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const project = await getProject(slug);
-
-    const notion = new NotionAPI();
-    const recordMap = await notion.getPage(project.notion_id);
 
     return (
         <>
@@ -63,7 +59,7 @@ export default async function ProjectModal({ params }: { params: Promise<{ slug:
                     </header>
 
                     <div className='flex-1 overflow-y-auto '>
-                        <NotionContent recordMap={recordMap} />
+                        <NotionWrapper notionId={project.notion_id} />
                     </div>
                 </div>
             </div>

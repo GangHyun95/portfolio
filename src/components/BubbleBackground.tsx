@@ -31,7 +31,6 @@ export default function BubbleBackground() {
 
     const createBubbles = () => {
         const count = Math.floor((window.innerWidth * window.innerHeight) / 50000);
-        console.log(count);
         setBubbles(
             Array.from({ length: count }, (_, i) => ({
                 id: i,
