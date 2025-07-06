@@ -13,6 +13,7 @@ export default function ContactSection() {
                 <div className='text-center mt-12'>
                     <Link
                         href='/contact-form'
+                        prefetch
                         className='cosmic-button w-fit flex items-center mx-auto gap-2 text-xl'
                         scroll={false}
                     >

@@ -34,6 +34,7 @@ export default function ProjectCard({ project }: Props) {
                 <Link
                     href={`/${slug}`}
                     scroll={false}
+                    prefetch
                     className={cn(
                         'absolute inset-0 flex items-center justify-center transition-opacity duration-300',
                         'bg-black/50',
