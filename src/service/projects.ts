@@ -3,7 +3,11 @@ import { Project, ProjectDetail } from '@/types/project';
 export async function getAllProjects(): Promise<Project[]> {
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/projects`, {
-            next: { revalidate: 3600 },
+            next: {
+                tags: ['projects'],
+                revalidate: 7 * 24 * 60 * 60,
+            },
+            
         });
 
         if (!res.ok) throw new Error('Failed to fetch projects');
@@ -17,7 +21,10 @@ export async function getAllProjects(): Promise<Project[]> {
 export async function getProject(slug: string): Promise<ProjectDetail> {
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/projects/${slug}`, {
-            next: { revalidate: 3600 },
+            next: {
+                tags: [`project-${slug}`],
+                revalidate: 7 * 24 * 60 * 60,
+            },
         });
 
         if (!res.ok) throw new Error('Failed to fetch project');

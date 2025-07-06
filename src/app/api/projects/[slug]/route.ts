@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase/server';
+import { NextResponse } from 'next/server';
 
 export async function GET(_req: Request, context: { params: Promise<{ slug: string }> }) {
     const { slug } = await context.params;
@@ -8,7 +9,9 @@ export async function GET(_req: Request, context: { params: Promise<{ slug: stri
         .eq('slug', slug)
         .single();
 
-    if (error) return Response.json({ error: error.message }, { status: 500 });
+    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
 
-    return Response.json(data);
+    return NextResponse.json(data, {
+        headers: { 'x-next-cache-tags': `project-${slug}` },
+    });
 }

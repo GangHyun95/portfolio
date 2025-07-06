@@ -67,7 +67,7 @@ export default function ProjectCard({ project }: Props) {
                 </div>
 
                 <h3 className='text-xl font-semibold mb-1'>{title}</h3>
-                <p className='text-muted-foreground text-sm mb-4 flex-1'>{description}</p>
+                <p className='text-muted-foreground text-sm mb-4 flex-1 leading-6'>{description}</p>
 
                 <div className='flex'>
                     <Button
