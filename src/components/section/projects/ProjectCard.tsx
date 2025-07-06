@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import GithubSvg from '@/components/icons/GithubSvg';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Project } from '@/types/project';
 
@@ -15,6 +16,7 @@ export default function ProjectCard({ project }: Props) {
     return (
         <div 
             className={cn(
+                'flex flex-col',
                 'bg-card rounded-lg overflow-hidden group transition-all duration-300',
                 'shadow-[0_2px_8px_rgba(0,0,0,0.05)]',
                 'hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(0,0,0,0.12)]'
@@ -51,7 +53,7 @@ export default function ProjectCard({ project }: Props) {
                 </Link>
             </div>
 
-            <div className='px-5 py-4'>
+            <div className='flex flex-col px-5 py-4 flex-1'>
                 <div className='flex flex-wrap gap-2 mb-4'>
                     {tech_stack.map((stack) => (
                         <span
@@ -64,30 +66,39 @@ export default function ProjectCard({ project }: Props) {
                 </div>
 
                 <h3 className='text-xl font-semibold mb-1'>{title}</h3>
-                <p className='text-muted-foreground text-sm mb-4'>{description}</p>
+                <p className='text-muted-foreground text-sm mb-4 flex-1'>{description}</p>
 
-                <div className='flex space-x-3'>
-                    <a
-                        href={demo_url}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='text-foreground/80 hover:text-primary transition-colors duration-300'
+                <div className='flex'>
+                    <Button
+                        asChild
+                        variant='ghost'
+                        size='icon'
+                        className='rounded-full group/button'
                     >
-                        <ExternalLink size={20} />
-                    </a>
-                    <a
-                        href={github_url}
-                        target='_blank'
-                        rel='noopener noreferrer'
+                        <a
+                            href={demo_url}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='text-foreground/80'
+                        >
+                            <ExternalLink className='size-5 group-hover/button:text-primary'/>
+                        </a>
+                    </Button>
+                    <Button
+                        asChild
+                        variant='ghost'
+                        size='icon'
+                        className='rounded-full group/button'
                     >
-                        <GithubSvg
-                            className={cn(
-                                'size-5 transition-colors duration-300',
-                                'dark:fill-white',
-                                'hover:fill-primary dark:hover:fill-primary'
-                            )}
-                        />
-                    </a>
+                        <a
+                            href={github_url}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <GithubSvg className='size-5 dark:fill-white group-hover/button:fill-primary'
+                            />
+                        </a>
+                    </Button>
                 </div>
             </div>
         </div>
