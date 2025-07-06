@@ -1,27 +1,15 @@
 'use client';
-import { Mail, Send, X } from 'lucide-react';
+
+import { Mail, X } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
 
-import Textarea from '@/components/input/Textarea';
-import TextInput from '@/components/input/TextInput';
 import { Button } from '@/components/ui/button';
-import {
-    Dialog,
-    DialogClose,
-    DialogContent,
-    DialogTitle,
-} from '@/components/ui/dialog';
+import { Dialog, DialogClose, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { cn } from '@/lib/utils';
-
+import ContactForm from '@/components/modal/contact/ContactForm';
 
 export default function ContactFormModal() {
     const router = useRouter();
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
-    })
     return (
         <Dialog defaultOpen onOpenChange={(open) => !open && router.back()}>
             <DialogContent
@@ -35,7 +23,6 @@ export default function ContactFormModal() {
                     <div className='flex-1 basis-1/2 min-h-8' />
                     <DialogTitle className='flex flex-auto items-center text-lg font-bold whitespace-nowrap space-x-3'>
                         <Mail className='text-primary'/>
-                        <p>Send Mail</p>
                     </DialogTitle>
                     <div className='flex flex-1 basis-1/2 justify-end items-center'>
                         <DialogClose asChild>
@@ -46,35 +33,7 @@ export default function ContactFormModal() {
                     </div>
                 </header>
                 <section className='flex-1 flex flex-col overflow-hidden'>
-                    <form className='flex flex-col h-full overflow-auto'>
-                        <section className='flex-1 overflow-auto px-8 md:px-20'>
-                            <TextInput
-                                id='name'
-                                label='Your Name'
-                                value={formData.name}
-                                onChange={(value) => setFormData(prev => ({ ...prev, name: value }))}
-                            />
-                            <TextInput
-                                id='email'
-                                label='Your Email'
-                                type='email'
-                                value={formData.email}
-                                onChange={(value) => setFormData(prev => ({ ...prev, email: value }))}
-                            />
-                            <Textarea
-                                id='message'
-                                label='Message'
-                                value={formData.message}
-                                onChange={(value) => setFormData((prev) => ({ ...prev, message: value }))}
-                            />
-                        </section>
-                        <footer className='flex flex-col flex-none my-6 px-8 md:px-20'>
-                            <Button className='rounded-full h-14'>
-                                <p className='text-base font-bold'>Send Mail</p>
-                                <Send className='size-4'/>
-                            </Button>
-                        </footer>
-                    </form>
+                    <ContactForm />
                 </section>
             </DialogContent>
         </Dialog>

@@ -7,9 +7,10 @@ type Props = {
     placeholder?: string;
     value: string;
     onChange: (value: string) => void;
+    onBlur: () => void;
     error?: string;
 };
-export default function TextInput({ id, label, type = 'text', placeholder, value, onChange, error }: Props) {
+export default function TextInput({ id, label, type = 'text', placeholder, value, onChange, onBlur, error }: Props) {
     return (
         <div className='py-3'>
             <label htmlFor={id} className='block text-sm font-medium text-gray-700 mb-1'>
@@ -20,6 +21,7 @@ export default function TextInput({ id, label, type = 'text', placeholder, value
                 type={type}
                 placeholder={placeholder || label}
                 value={value}
+                onBlur={onBlur}
                 onChange={(e) => onChange(e.target.value)}
                 className={cn(
                     'block w-full rounded-sm border px-3 py-2 h-14 text-base text-foreground placeholder-gray-400',

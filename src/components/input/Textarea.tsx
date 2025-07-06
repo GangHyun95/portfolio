@@ -6,10 +6,11 @@ type Props = {
     placeholder?: string;
     value: string;
     onChange: (value: string) => void;
+    onBlur: () => void;
     error?: string;
 };
 
-export default function Textarea({ id, label, placeholder, value, onChange, error }: Props) {
+export default function Textarea({ id, label, placeholder, value, onChange, onBlur, error }: Props) {
     return (
         <div className='py-3'>
             <label htmlFor={id} className='block text-sm font-medium text-gray-700 mb-1'>
@@ -21,6 +22,7 @@ export default function Textarea({ id, label, placeholder, value, onChange, erro
                 placeholder={placeholder || label}
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
+                onBlur={onBlur}
                 className={cn(
                     'block w-full resize-none rounded-sm border px-3 py-2 text-base placeholder-gray-400',
                     'focus:outline-none',
