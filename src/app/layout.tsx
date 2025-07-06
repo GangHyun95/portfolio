@@ -7,6 +7,7 @@ import Navbar from '@/components/navbar';
 import ThemeProviderWrapper from '@/components/ThemeProviderWrapper';
 import './styles/globals.css';
 import 'react-notion-x/src/styles.css';
+import { Toaster } from 'sonner';
 
 const pretendard = localFont({
     src: [
@@ -36,6 +37,7 @@ export default function RootLayout({
         <html lang='en' suppressHydrationWarning>
             <body className={`${pretendard.variable} antialiased min-h-screen`}>
                 <ThemeProviderWrapper>
+                    <Toaster richColors position='top-center'/>
                     <BubbleBackground />
                     <Navbar />
                     <main>

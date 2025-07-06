@@ -3,10 +3,10 @@
 import { Mail, X } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
+import ContactForm from '@/components/modal/contact/ContactForm';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogClose, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { cn } from '@/lib/utils';
-import ContactForm from '@/components/modal/contact/ContactForm';
 
 export default function ContactFormModal() {
     const router = useRouter();

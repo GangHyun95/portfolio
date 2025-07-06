@@ -1,10 +1,13 @@
+import { MailCheck, MailWarning } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import React, { useState } from 'react';
+import { toast } from 'sonner';
+
 import Textarea from '@/components/input/Textarea';
 import TextInput from '@/components/input/TextInput';
 import SendMailButton from '@/components/modal/contact/SendMailButton';
 import { useContactForm } from '@/hooks/useContactForm';
 import { sendContactMail } from '@/service/mail';
-import { useRouter } from 'next/navigation';
-import React, { useState } from 'react';
 
 export default function ContactForm() {
     const router = useRouter();
@@ -18,11 +21,14 @@ export default function ContactForm() {
 
         try {
             await sendContactMail(form);
-            alert("성공");
-            router.back();
+            toast.success('메일이 전송되었습니다.', {
+                icon: <MailCheck className='size-4' />,
+            })
         } catch (err) {
-            alert("실패");
             console.log(err);
+            toast.error('메일 전송에 실패했습니다.', {
+                icon: <MailWarning className='size-4' />,
+            });
         } finally {
             setLoading(false);
             router.back();

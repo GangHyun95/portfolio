@@ -1,5 +1,6 @@
-import { Button } from '@/components/ui/button';
 import { LoaderCircle, Send } from 'lucide-react';
+
+import { Button } from '@/components/ui/button';
 
 export default function SendMailButton({ disabled, isLoading }: { disabled: boolean; isLoading: boolean; }) {
     return (
