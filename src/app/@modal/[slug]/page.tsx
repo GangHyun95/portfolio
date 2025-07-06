@@ -22,7 +22,7 @@ export default async function ProjectModal({ params }: { params: Promise<{ slug:
                     'md:min-h-[400px] md:max-h-[90vh] md:min-w-[600px] md:max-w-4xl md:rounded-2xl lg:max-w-5xl xl:max-w-6xl',
                     'bg-white pointer-events-auto overflow-hidden'
                 )}>
-                    <header className='flex items-center justify-between px-12 py-4 border-b'>
+                    <header className='flex items-center justify-between px-4 md:px-12 py-4 border-b'>
                         <div className='flex-1 basis-1/2 min-h-8 flex items-center space-x-1'>
                             <Button
                                 variant='ghost'
