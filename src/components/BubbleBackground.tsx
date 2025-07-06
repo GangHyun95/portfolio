@@ -14,6 +14,7 @@ type Bubble = {
 export default function BubbleBackground() {
     const [bubbles, setBubbles] = useState<Bubble[]>([]);
     const resizeTimer = useRef<NodeJS.Timeout | null>(null);
+    const prevWidth = useRef<number>(typeof window !== 'undefined' ? window.innerWidth : 0);
 
     useEffect(() => {
         createBubbles();
@@ -21,7 +22,10 @@ export default function BubbleBackground() {
         const onResize = () => {
             if (resizeTimer.current) clearTimeout(resizeTimer.current);
             resizeTimer.current = setTimeout(() => {
-                createBubbles();
+                if (window.innerWidth !== prevWidth.current) {
+                    prevWidth.current = window.innerWidth;
+                    createBubbles();
+                }
             }, 200);
         };
 
