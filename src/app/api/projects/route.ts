@@ -10,9 +10,8 @@ export async function GET() {
             
         if (error) throw error;
         
-        
         return NextResponse.json(
-            { success: true, message: '프로젝트 데이터를 불러왔습니다.', data: { projects: data } },
+            { success: true, message: '프로젝트 데이터를 불러왔습니다.', data: { projects: data ?? [] } },
             { headers: { 'x-next-cache-tags': 'projects' } },
         );
     } catch (error) {
