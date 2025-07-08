@@ -7,11 +7,15 @@ import NotionWrapper from '@/components/modal/notion/NotionWrapper';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { getProject } from '@/service/projects';
+import { redirect } from 'next/navigation';
 
 export default async function ProjectModal({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
     const project = await getProject(slug);
 
+    if (!project) {
+        redirect('/');
+    }
     return (
         <ModalWrapper>
             <div className='fixed inset-0 z-50 flex items-center justify-center pointer-events-none'>

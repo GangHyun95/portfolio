@@ -21,7 +21,7 @@ export async function getAllProjects(): Promise<Project[]> {
     }
 }
 
-export async function getProject(slug: string): Promise<ProjectDetail> {
+export async function getProject(slug: string): Promise<ProjectDetail | null> {
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/projects/${slug}`, {
             next: {
@@ -31,6 +31,8 @@ export async function getProject(slug: string): Promise<ProjectDetail> {
         });
 
         const data = await res.json();
+
+        if (res.status === 404) return null;
 
         if (!res.ok || !data.success) throw new Error(data.message || 'Failed to fetch project');
 
