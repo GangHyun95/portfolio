@@ -20,13 +20,14 @@ export default function ContactForm() {
         setLoading(true);
 
         try {
-            await sendContactMail(form);
-            toast.success('메일이 전송되었습니다.', {
+            const res = await sendContactMail(form);
+            toast.success(res.message, {
                 icon: <MailCheck className='size-4' />,
             })
         } catch (err) {
             console.error(err);
-            toast.error('메일 전송에 실패했습니다.', {
+            const message = err instanceof Error ? err.message : '메일 전송에 실패했습니다.';
+            toast.error(message, {
                 icon: <MailWarning className='size-4' />,
             });
         } finally {

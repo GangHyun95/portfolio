@@ -5,7 +5,11 @@ export async function sendContactMail(formData: { name: string; email: string; m
         body: JSON.stringify(formData),
     });
 
-    if (!res.ok) throw new Error('Failed to send mail');
+    const data = await res.json();
 
-    return res.json();
+    if (!res.ok || !data.success) {
+        throw new Error(data.message || 'Failed to send mail');
+    }
+
+    return data;
 };

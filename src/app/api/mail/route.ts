@@ -11,10 +11,15 @@ export async function POST(req: Request) {
             subject: `[Portfolio] 메시지 - ${name}`,
             text: message,
         });
-
-        return Response.json({ ok: true });
+        
+        return Response.json(
+            { success: true, message: '메시지가 성공적으로 전송되었습니다.', data: null },
+        );
     } catch (err) {
         console.error('POST /contact error:', err);
-        return Response.json({ ok: false }, { status: 500 });
+        return Response.json(
+            { success: false, message: '메시지를 전송하는 중 오류가 발생했습니다.', data: null },
+            { status: 500 },
+        );
     }
 }

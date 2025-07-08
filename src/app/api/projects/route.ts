@@ -10,11 +10,16 @@ export async function GET() {
             
         if (error) throw error;
         
-        return NextResponse.json(data, {
-            headers: { 'x-next-cache-tags': 'projects' },
-        });
+        
+        return NextResponse.json(
+            { success: true, message: '프로젝트 데이터를 불러왔습니다.', data: { projects: data } },
+            { headers: { 'x-next-cache-tags': 'projects' } },
+        );
     } catch (error) {
         console.error('GET /projects error:', error);
-        return NextResponse.json({ error: '프로젝트 데이터를 불러오는 중 오류가 발생했습니다.' }, { status: 500 });
+        return NextResponse.json(
+            { success: false, message: '프로젝트 데이터를 불러오는 중 오류가 발생했습니다.', data: null },
+            { status: 500 },
+        );
     }
 }

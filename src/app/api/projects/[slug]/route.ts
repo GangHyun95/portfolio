@@ -11,12 +11,16 @@ export async function GET(_req: Request, context: { params: Promise<{ slug: stri
             .single();
 
         if (error) throw error;
-
-        return NextResponse.json(data, {
-            headers: { 'x-next-cache-tags': `project-${slug}` },
-        });
+        
+        return NextResponse.json(
+            { success: true, message: '프로젝트 상세 데이터를 불러왔습니다.', data: { project: data } },
+            { headers: { 'x-next-cache-tags': `project-${slug}` } },
+        );
     } catch (err) {
         console.error('GET /projects/[slug] error:', err);
-        return NextResponse.json({ error: '프로젝트 상세 데이터를 불러오는 중 오류가 발생했습니다.' }, { status: 500 });
+        return NextResponse.json(
+            { success: false, message: '프로젝트 상세 데이터를 불러오는 중 오류가 발생했습니다.', data: null },
+            { status: 500 },
+        );
     }
 }

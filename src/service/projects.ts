@@ -10,9 +10,11 @@ export async function getAllProjects(): Promise<Project[]> {
             
         });
 
-        if (!res.ok) throw new Error('Failed to fetch projects');
+        const data = await res.json();
 
-        return res.json();
+        if (!res.ok || !data.success) throw new Error(data.message || 'Failed to fetch projects');
+
+        return data.data.projects;
     } catch (err) {
         console.error('Failed to fetch projects:', err);
         throw err;
@@ -27,9 +29,11 @@ export async function getProject(slug: string): Promise<ProjectDetail> {
             },
         });
 
-        if (!res.ok) throw new Error('Failed to fetch project');
+        const data = await res.json();
 
-        return res.json();
+        if (!res.ok || !data.success) throw new Error(data.message || 'Failed to fetch project');
+
+        return data.data.project;
     } catch (err) {
         console.error('Failed to fetch project', err);
         throw err;
