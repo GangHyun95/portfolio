@@ -5,7 +5,6 @@ import localFont from 'next/font/local';
 import BubbleBackground from '@/components/BubbleBackground';
 import Navbar from '@/components/navbar';
 import ThemeProviderWrapper from '@/components/ThemeProviderWrapper';
-import HomeContent from '@/components/layout/HomeContent';
 import './styles/globals.css';
 import 'react-notion-x/src/styles.css';
 import { Toaster } from 'sonner';
@@ -49,14 +48,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
-    modal,
-    projects,
+    modal
 }: Readonly<{
     children: React.ReactNode;
     modal: React.ReactNode;
-    projects: React.ReactNode;
 }>) {
-
     return (
         <html lang='ko' suppressHydrationWarning>
             <body className={`${pretendard.variable} antialiased min-h-screen`}>
@@ -66,7 +62,6 @@ export default function RootLayout({
                     <Navbar />
                     <main>
                         {children}
-                        <HomeContent projects={projects}/>
                         {modal}
                     </main>
                 </ThemeProviderWrapper>

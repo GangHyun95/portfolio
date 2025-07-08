@@ -20,6 +20,7 @@ export async function getAllProjects(): Promise<Project[]> {
         throw err;
     }
 }
+
 export async function getProject(slug: string): Promise<ProjectDetail> {
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/projects/${slug}`, {

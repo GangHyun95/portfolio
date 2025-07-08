@@ -1,3 +1,5 @@
+import Home from '@/app/page';
+
 export default function Page() {
-    return null;
+    return <Home />;
 }

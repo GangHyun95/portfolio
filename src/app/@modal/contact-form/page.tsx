@@ -5,6 +5,7 @@ import ContactForm from '@/components/modal/contact/ContactForm';
 import ModalWrapper from '@/components/modal/ModalWrapper';
 import { cn } from '@/lib/utils';
 
+export const dynamic = 'force-dynamic';
 export default function ContactFormModal() {
     return (
         <ModalWrapper>
