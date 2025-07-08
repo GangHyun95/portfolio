@@ -1,10 +1,9 @@
 import { ArrowRight } from 'lucide-react';
 
 import ProjectCard from '@/components/section/projects/ProjectCard';
-import { getAllProjects } from '@/service/projects';
+import { Project } from '@/types/project';
 
-export default async function ProjectsSection() {
-    const projects = await getAllProjects();
+export default async function ProjectsSection({ projects }: { projects: Project[]}) {
     return (
         <section id='projects' className='py-24 px-4 relative'>
             <div className='container mx-auto max-w-5xl'>

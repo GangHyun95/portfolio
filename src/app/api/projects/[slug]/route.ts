@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+
 import { supabase } from '@/lib/supabase/server';
 
 export async function GET(_req: Request, context: { params: Promise<{ slug: string }> }) {
