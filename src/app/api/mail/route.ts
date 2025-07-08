@@ -1,9 +1,9 @@
 import transporter from '@/lib/email';
 
 export async function POST(req: Request) {
-    const { name, email, message } = await req.json();
-
     try {
+        const { name, email, message } = await req.json();
+
         await transporter.sendMail({
             to: process.env.SMTP_USER,
             from: `'${name}' <${email}>`,
@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 
         return Response.json({ ok: true });
     } catch (err) {
-        console.error(err);
+        console.error('POST /contact error:', err);
         return Response.json({ ok: false }, { status: 500 });
     }
 }
