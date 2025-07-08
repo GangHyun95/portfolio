@@ -10,7 +10,12 @@ export async function POST(req: Request) {
         );
     }
     try {
-        const { slug } = await req.json();
+        let slug: string | undefined;
+
+        try {
+            const body = await req.json();
+            slug = body?.slug;
+        } catch {}
 
         revalidateTag('projects');
         if (slug) {
